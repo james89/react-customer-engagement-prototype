@@ -1,0 +1,24 @@
+{
+  "name": "react-app",
+  "description": "Accelerator for getting started with a ReactJS app",
+  "main": "Gulpfile.js",
+  "authors": [
+    "Kev Chapman"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
