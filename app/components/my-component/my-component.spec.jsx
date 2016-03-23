@@ -25,6 +25,6 @@ describe('Component Renderer', () => {
 
 	it('should render a title as per the title prop', () => {
 		expect(component.findByQuery('.title')[0].text).toEqual('test title');
-	})
+	});
 
 })
