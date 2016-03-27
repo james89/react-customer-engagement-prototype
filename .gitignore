@@ -3,3 +3,4 @@ dist
 www
 bower_components
 coverage
+.DS_Store
