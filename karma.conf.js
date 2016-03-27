@@ -4,6 +4,7 @@
 var debug = process.argv.indexOf('--debug') !== -1;
 var chrome = process.argv.indexOf('--chrome') !== -1;
 var live = process.argv.indexOf('--live') !== -1;
+var istanbul = require('browserify-babel-istanbul');
 
 module.exports = function(config) {
   config.set({
@@ -19,7 +20,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/components/**/*.spec.js?(x)'
+      'app/components/**/*.js?(x)'
     ],
 
 
@@ -31,19 +32,29 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/components/**/*.spec.js?(x)': ['browserify']
+      'app/components/**/*.js?(x)': ['browserify']
     },
 
     browserify: {
 			debug: debug,
-			transform: ['babelify'],
+            transform: ['babelify', istanbul({
+				ignore: ['**/*.spec.js?(x)', '**/node_modules/**']
+			})],
 			extensions: ['.jsx', '.js']
 	 	},
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['html', 'progress', 'tape'],
+    reporters: ['html', 'progress', 'tape', 'coverage'],
+
+
+    coverageReporter: {
+      dir : 'coverage',
+      reporters: [
+          { type: 'html', subdir: 'html' }
+      ]
+    },
 
 
     // web server port
