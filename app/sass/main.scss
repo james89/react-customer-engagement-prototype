@@ -1,8 +1,282 @@
 @import 'imports';
 
+
+
 body {
+  background: #F6F5F5;
+	font-family: 'Open Sans', sans-serif;
+}
+.mui-appbar {
+  color: #85BC40;
+  background: #010202;
+	min-height: 80px;
+
+}
+.mui--appbar-height {
+	height: 80px;
+}
+.mui--appbar-height.header {
+	font-size: 28px;
+	font-weight: normal;
+	padding-left: 50px;
+	letter-spacing: 1px;
+
+}
+.mui-appbar .mui-btn {
+  background-color: transparent;
+}
+
+.mui-btn.active {
+  background: #85BC40;
+}
+
+.nav-items {
+	vertical-align: bottom;
+	.mui-btn {
+		margin: 0;
+	}
+}
+
+
+/*
+
+Datepicker + Dropdown
+
+*/
+.rating-key {
+	float: right;
+  margin-right: 250px;
+}
+.datepick {
+	margin-top: 30px;
+
+	.input-daterange {
+		margin: 20px 40px;
+	}
+	.input-group-addon {
+		background: #fff;
+		border-style: none;
+	}
+
+	input {
+		min-width: 300px;
+	}
+
+	.datepick-btn {
+		color: #85BC40;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: inline-table;
+    vertical-align: top;
+    background: white;
+    border: 2px solid #85BC40;
+	}
+
+	.datepick-btn:hover {
+		color: #fff;
+		background-color: #85BC40;
+
+	}
+
+
+}
+
+//enable absolute positioning
+.inner-addon {
+    position: relative;
+		display: inline-table;
+		margin-right: 40px;
+}
+
+//style icon
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+	color: #84BC40;
+    z-index: 999;
+}
+
+// align icon
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+// add padding
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.inner-addon span {
+    position: absolute;
+    padding: 10px;
+    color: #000;
+		font-weight: 700;
+    z-index: 999;
+    line-height: 1;
+    top: 1px;
+}
+
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ http://getbootstrap.com.vn/examples/equal-height-columns/
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.row-eq-height [class*="col-"] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+/*
+ * Styles copied from the Grid example to make grid rows & columns visible.
+ */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h4 {
+  margin-top: 25px;
+}
+
+.survey {
+	margin: 40px;
+}
+.survey .row {
+  margin-bottom: 0px;
+}
+.survey .row .row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.survey .row-eq-height [class*="col-"] {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  // background-color: #F6F5F5;
+  // background-color: rgba(86,61,124,.15);
+  border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px dashed #ddd;
+	border-right: 1px dashed #ddd;
+  // border: 1px solid rgba(86,61,124,.2);
+
+
+}
+
+.survey .row-eq-height > div:last-of-type {
+	border-right: 1px solid #ddd !important;
+}
+
+.row-header {
+	background-color: #404040 !important;
+	border-style: none !important;
+	color: #fff;
+	font-weight: normal;
+}
+
+.col-header {
+	background-color: rgba(133,188,64,.15) !important;
+	text-transform: uppercase;
 	font-size: 10px;
-	margin: 0;
-	padding: 0;
-	background: #eee;
+	text-align: center;
+	color: #84BC40;
+	letter-spacing: .1em;
+}
+
+
+.row-header.light-gray-bg {
+	background-color: #75787B !important;
+}
+
+
+
+
+
+/*
+
+Interaction points Row
+
+*/
+
+.interaction-pts .btn {
+	background: #fff;
+	border: 3px solid #85BC40;
+	color: #85BC40;
+	margin: 5px;
+	font-weight: bold;
+	padding: 3px 6px;
+}
+
+.interaction-pts .btn:hover {
+	background: #85BC40;
+	color: #fff;
+}
+
+
+
+/*
+
+Customer Satisfaction Row
+
+*/
+
+.row .rating-green {
+	background: #85BC40;
+	color: #658F2F;
+	border: 1px solid #658F2F !important;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.row .rating-orange {
+	display: inline-flex;
+	background: #FED86F;
+	border: 1px solid #EE9825 !important;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #EE9825;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+}
+
+.row .rating-red {
+	display: inline-flex;
+	background: #FD8D90;
+	border: 1px solid #E7575C !important;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #E7575C;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+}
+
+
+
+/*
+
+Text Analytics Rows
+
+*/
+
+.text-analytics {
+	font-weight: 600;
+	.positive {
+		color: #85BC40;
+	}
+	.negative {
+		color: #F47C6D;
+	}
 }

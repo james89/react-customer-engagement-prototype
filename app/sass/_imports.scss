@@ -1,1 +1,6 @@
+$icon-font-path: "../../";
+
 @import 'bootstrap'; // loaded via bower
+@import 'bootstrap-daterangepicker';
+@import 'thermometer';
+@import 'react-datetime';

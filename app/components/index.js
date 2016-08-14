@@ -1,5 +1,5 @@
-import MyComponent from './my-component/my-component.jsx';
+import MainDashboard from './my-component/my-component.jsx';
 
 export default {
-	MyComponent
+	MainDashboard
 }
