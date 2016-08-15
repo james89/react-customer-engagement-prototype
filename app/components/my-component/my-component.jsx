@@ -110,7 +110,7 @@ export default class MainDashboard extends React.Component {
 	        <div className="container-fluid">
 
 		          <div className="row datepick">
-								<div className="col-md-5">
+								<div className="datepicker">
 
 										          <DatetimeRangePicker
 										            autoUpdateInput={false}
@@ -130,8 +130,8 @@ export default class MainDashboard extends React.Component {
 										            </div>
 										          </DatetimeRangePicker>
 
-											<Button>Go</Button>
 									</div>
+									<Button className="datepick-btn">Go</Button>
 
 								<div className="col-md-3 rating-key">
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

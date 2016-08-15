@@ -1,0 +1,77 @@
+{
+	"dashboard":{
+		"fromDate":"01112015",
+		"toDate":"25022016",
+		"dateFormat":"ddMMyyyy",
+		"customerExperience":{
+
+			"customerSatisfaction":{
+				"seek":7,
+				"purchase":8,
+				"developFirstImpression":6,
+				"use":7,
+				"getHelp":8,
+				"optimize":8,
+				"seekExternal":6,
+				"leave":"3p2"
+			},
+			"easeOfDoingBusiness":{
+				"seek":7,
+				"purchase":8,
+				"developFirstImpression":7,
+				"use":7,
+				"getHelp":8,
+				"optimize":8,
+				"seekExternal":6,
+				"leave":"4p2"
+			},
+			"textAnalytics":{
+				"topPositiveThemes":[
+					{
+						"phases": "seek;purchase",
+						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+					},
+					{
+						"phases":"developFirstImpression;use;getHelp;optimize",
+						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+					},
+					{
+						"phases":"seekExternal;leave",
+						"text":"Helpful and Accurate Information"
+					}
+				],
+				"topNegativeThemes":[
+					{
+						"phases": "seek;purchase",
+						"text":"Competitors, Discounts and Offers, Affordability for Price"
+					},
+					{
+						"phases":"developFirstImpression;use;getHelp;optimize",
+						"text": "Customer Service – Multiple Attempts, Connectivity – Connection Strength, <br> Customer Service – Status Updates"
+
+					},
+					{
+						"phases":"seekExternal;leave",
+						"text": "Competitors, Trust, Issue Resolution"
+					}
+				]
+
+			},
+			"feedbackConfidence":{
+				"seek":7,
+				"purchase":8,
+				"developFirstImpression":7,
+				"use":7,
+				"getHelp":6,
+				"optimize":5,
+				"seekExternal":4,
+				"leave":2
+			},
+			"nsp":{
+				"meter":20
+			}
+
+		}
+	}
+
+}
