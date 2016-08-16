@@ -18,9 +18,9 @@
 			"easeOfDoingBusiness":{
 				"seek":7,
 				"purchase":8,
-				"developFirstImpression":7,
+				"developFirstImpression":2,
 				"use":7,
-				"getHelp":8,
+				"getHelp":4,
 				"optimize":8,
 				"seekExternal":6,
 				"leave":4
