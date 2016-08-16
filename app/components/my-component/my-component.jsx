@@ -1,11 +1,11 @@
 import React from 'react';
-// import DateTimeField from 'react-bootstrap-datetimepicker';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import jQuery from 'jquery';
 import moment from 'moment';
 import { Popover, Overlay, OverlayTrigger, Button } from 'react-bootstrap';
 import DatetimeRangePicker from 'react-bootstrap-datetimerangepicker';
+import axios from 'axios';
 
 
 import Thermometer from '../thermometer/thermometer.jsx';
@@ -25,8 +25,12 @@ Review & Confirm Account Updates</p>
 );
 
 const defaultProps = {
-	title: ''
+	data: ''
 }
+
+
+// MainDashboard.defaultProps = defaultProps;
+
 export default class MainDashboard extends React.Component {
 	constructor() {
 		super();
@@ -41,6 +45,8 @@ export default class MainDashboard extends React.Component {
 			show: false,
 			startDate: undefined,
       endDate: undefined,
+      data: {},
+      data2: ''
 		};
 
 	}
@@ -59,20 +65,28 @@ export default class MainDashboard extends React.Component {
   }
 
 	componentDidMount () {
+    console.log(this);
+    // request dummy data
+    axios.get('./dashboard.json')
+      .then(function(result){
 
-		// instantiate datepickers
-		// $(this.refs.datepickerTo).datepicker({
-		// 	format: 'MM dd, yyyy',
-		// 	todayHighlight: true
-		// });
-		// $(this.refs.datepickerFrom).datepicker({
-		// 	format: 'MM dd, yyyy',
-		// 	todayHighlight: true
-		// });
+        this.setState({
+          dashboardData: result.data.dashboard.customerExperience,
+          data2: result.data.dashboard.customerExperience.customerSatisfaction,
+          easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness
+        })
+
+      }.bind(this));
+
+
 
 	}
 
 	render() {
+
+    let custSatisfactionData = this.state.data2 || '';
+    let easeRatings = this.state.easeRatings || '';
+
 		let { startDate, endDate } = this.state;
 
 		 let label = '';
@@ -92,6 +106,58 @@ export default class MainDashboard extends React.Component {
 			 startDate,
 			 endDate,
 		 };
+
+     var customerSatisfactionNodes = Object.keys(custSatisfactionData).map(function(rating) {
+
+       if (custSatisfactionData[rating] <= 4){
+         return (
+           <div className="col-md-1 rating-red">
+             {custSatisfactionData[rating]}
+           </div>
+         )
+
+       } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 7){
+         return (
+           <div className="col-md-1 rating-orange">
+             {custSatisfactionData[rating]}
+           </div>
+         )
+       } else if (custSatisfactionData[rating] > 7){
+         return (
+           <div className="col-md-1 rating-green">
+             {custSatisfactionData[rating]}
+           </div>
+         )
+       }
+
+    });
+
+    var easeOfDoingBusinessNodes = Object.keys(easeRatings).map(function(rating) {
+
+      if (easeRatings[rating] <= 4){
+        return (
+          <div className="col-md-1 rating-red">
+            {easeRatings[rating]}
+          </div>
+        )
+
+      } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 7){
+        return (
+          <div className="col-md-1 rating-orange">
+            {easeRatings[rating]}
+          </div>
+        )
+      } else if (easeRatings[rating] > 7){
+        return (
+          <div className="col-md-1 rating-green">
+            {easeRatings[rating]}
+          </div>
+        )
+      }
+
+   });
+
+
 		return (
 			<div className="react-wrapper">
 
@@ -184,27 +250,27 @@ export default class MainDashboard extends React.Component {
 		                <div className="col-md-1 row-header">Interaction Points</div>
 		                <div className="col-md-1">
 		                  {/* swap out the html attributes with JS attributes in popover options object (refer to documentation) when JSON data is ready */}
-											<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+											<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 												<Button>A</Button>
 											</OverlayTrigger>
 
-											<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+											<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 												<Button>B</Button>
 											</OverlayTrigger>
 											</div>
 		                <div className="col-md-1">
-										<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 											<Button>C</Button>
 										</OverlayTrigger>
-										<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 											<Button>D</Button>
 										</OverlayTrigger>
 		                </div>
 		                <div className="col-md-1">
-										<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 											<Button>E</Button>
 										</OverlayTrigger>
-										<OverlayTrigger trigger={['click']} placement="bottom" overlay={popoverHoverFocus}>
+										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
 											<Button>F</Button>
 										</OverlayTrigger>
 		                </div>
@@ -217,8 +283,11 @@ export default class MainDashboard extends React.Component {
 		              {/* Customer Satisfaction */}
 		              <div className="row row-eq-height">
 		                <div className="col-md-1 row-header light-gray-bg">Customer Satisfaction</div>
-		                <div className="col-md-1 rating-orange">
-		                  7
+
+                    {customerSatisfactionNodes}
+
+                    {/* <div className="col-md-1 rating-orange">
+
 		                </div>
 		                <div className="col-md-1 rating-orange">8</div>
 		                <div className="col-md-1 rating-green">9</div>
@@ -226,19 +295,12 @@ export default class MainDashboard extends React.Component {
 		                <div className="col-md-1" />
 		                <div className="col-md-1" />
 		                <div className="col-md-1" />
-		                <div className="col-md-1" />
+		                <div className="col-md-1" /> */}
 		              </div>
 		              {/* Ease of Doing Business */}
 		              <div className="row row-eq-height">
 		                <div className="col-md-1 row-header light-gray-bg">Ease of Doing Business</div>
-		                <div className="col-md-1 rating-red">6</div>
-		                <div className="col-md-1"><br /><br /><br /><br /></div>
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
+		                {easeOfDoingBusinessNodes}
 		              </div>
 		              {/* Text Analytics - Positive Themes */}
 		              <div className="row row-eq-height text-analytics">
