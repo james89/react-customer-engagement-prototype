@@ -232,7 +232,7 @@ export default class MainDashboard extends React.Component {
 										          </DatetimeRangePicker>
 
 									</div>
-									<Button className="datepick-btn" onClick={this.getJSON.bind(this)}>Go</Button>
+									<Button className="datepick-btn" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate}>Go</Button>
 
 								<div className="col-md-3 rating-key">
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

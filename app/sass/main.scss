@@ -79,6 +79,12 @@ Datepicker + Dropdown
     margin-left: 20px;
 	}
 
+  .datepick-btn[disabled], .datepick-btn[disabled]:hover {
+    background: #8a8a8a;
+    border-color: #fff;
+    color: #fff;
+  }
+
 	.datepick-btn:hover {
 		color: #fff;
 		background-color: #85BC40;

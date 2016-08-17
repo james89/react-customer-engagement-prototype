@@ -33,11 +33,11 @@
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",
-						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+						"text":"Attitude and Professionalism"
 					},
 					{
 						"phases":"seekExternal;leave",
-						"text":"Helpful and Accurate Information"
+						"text":"Helpful and Accurate Information, Knowledge and Competence, Knowledge and Competence"
 					}
 				],
 				"topNegativeThemes":[
