@@ -10,6 +10,7 @@ import axios from 'axios';
 
 import Thermometer from '../thermometer/thermometer.jsx';
 import FeedbackConfidenceRow from '../feedbackConfidenceRow/feedback-confidence.jsx';
+import TextAnalyticsPositiveRow from '../textAnalyticsPositiveRow/text-analytics-positive.jsx';
 
 
 const popoverHoverFocus = (
@@ -48,7 +49,11 @@ export default class MainDashboard extends React.Component {
 			startDate: undefined,
       endDate: undefined,
       data: {},
-      data2: ''
+      data2: '',
+      easeRatings: undefined,
+      firstOrSecondJSON: undefined,
+      dashboardData: undefined,
+      positiveRowData: ''
 		};
 
 	}
@@ -66,6 +71,32 @@ export default class MainDashboard extends React.Component {
     });
   }
 
+
+
+  getJSON () {
+    let jsonPath = '';
+    if(this.state.firstOrSecondJSON === 'first'){
+      jsonPath = './dashboard2.json'
+      this.setState({firstOrSecondJSON: 'second'})
+    } else {
+      jsonPath = './dashboard.json'
+      this.setState({firstOrSecondJSON: 'first'})
+
+    }
+    return axios.get(jsonPath)
+      .then(function(result){
+
+        this.setState({
+          dashboardData: result.data.dashboard.customerExperience,
+          data2: result.data.dashboard.customerExperience.customerSatisfaction,
+          easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness,
+          positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes
+        })
+
+      }.bind(this));
+
+  }
+
 	componentDidMount () {
     console.log(this);
     // request dummy data
@@ -75,7 +106,9 @@ export default class MainDashboard extends React.Component {
         this.setState({
           dashboardData: result.data.dashboard.customerExperience,
           data2: result.data.dashboard.customerExperience.customerSatisfaction,
-          easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness
+          easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness,
+          positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes,
+          firstOrSecondJSON: 'first'
         })
 
       }.bind(this));
@@ -199,7 +232,7 @@ export default class MainDashboard extends React.Component {
 										          </DatetimeRangePicker>
 
 									</div>
-									<Button className="datepick-btn">Go</Button>
+									<Button className="datepick-btn" onClick={this.getJSON.bind(this)}>Go</Button>
 
 								<div className="col-md-3 rating-key">
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -276,11 +309,46 @@ export default class MainDashboard extends React.Component {
 											<Button>F</Button>
 										</OverlayTrigger>
 		                </div>
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
+		                <div className="col-md-1">
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>G</Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>H</Button>
+                      </OverlayTrigger>
+                    </div>
+                    <div className="col-md-1">
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>I</Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>J</Button>
+                      </OverlayTrigger>
+                    </div>
+                    <div className="col-md-1">
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>K</Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>L</Button>
+                      </OverlayTrigger>
+                    </div>
+                    <div className="col-md-1">
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>M</Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>N</Button>
+                      </OverlayTrigger>
+                    </div>
+                    <div className="col-md-1">
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>O</Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                        <Button>P</Button>
+                      </OverlayTrigger>
+                    </div>
 		              </div>
 		              {/* Customer Satisfaction */}
 		              <div className="row row-eq-height">
@@ -305,12 +373,10 @@ export default class MainDashboard extends React.Component {
 		                {easeOfDoingBusinessNodes}
 		              </div>
 		              {/* Text Analytics - Positive Themes */}
-		              <div className="row row-eq-height text-analytics">
-		                <div className="col-md-1 row-header"><span>Text Analytics - <span className="positive">Positive Themes</span></span></div>
-		                <div className="col-md-2 positive">Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence</div>
-		                <div className="col-md-4 positive">Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence</div>
-		                <div className="col-md-2 positive">Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence</div>
-		              </div>
+
+                    <TextAnalyticsPositiveRow positiveThemes={this.state.positiveRowData} />
+
+
 		              {/* Text Analytics - Negative Themes */}
 		              <div className="row row-eq-height text-analytics">
 		                <div className="col-md-1 row-header"><span>Text Analytics - <span className="negative">Negative Themes</span></span></div>
