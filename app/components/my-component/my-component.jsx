@@ -267,7 +267,7 @@ export default class MainDashboard extends React.Component {
 	       				</div>
 		          </div> {/* /date pick row */}
 		          <div className="survey row">
-		            <div className="col-md-10 col-sm-12">
+		            <div className="col-sm-12 col-md-12">
 		              {/* Customer Experience - Header Row */}
 		              <div className="row row-eq-height">
 		                <div className="col-md-1 row-header">Customer Experience</div>

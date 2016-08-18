@@ -29,7 +29,7 @@
 				"topPositiveThemes":[
 					{
 						"phases": "seek;purchase",
-						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+						"text":"Knowledge and Competence"
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",
@@ -43,16 +43,16 @@
 				"topNegativeThemes":[
 					{
 						"phases": "seek;purchase",
-						"text":"Competitors, Discounts and Offers, Affordability for Price"
+						"text":"Competitors, Discounts and Offers, Affordability for Price, Trust, Issue Resolution"
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",
-						"text": "Customer Service – Multiple Attempts, Connectivity – Connection Strength, <br> Customer Service – Status Updates"
+						"text": "Customer Service – Multiple Attempts "
 
 					},
 					{
 						"phases":"seekExternal;leave",
-						"text": "Competitors, Trust, Issue Resolution"
+						"text": "Competitors, Connectivity – Connection Strength, <br> Customer Service – Status Updates"
 					}
 				]
 

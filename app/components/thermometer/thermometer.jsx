@@ -5,11 +5,12 @@ class Thermometer extends React.Component {
   constructor() {
     super();
   }
+  
 
   render() {
     return (
 
-      <svg width="176px" height="598px" viewBox="1115 213 176 598" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg width="130px" height="450px" viewBox="1115 213 176 598" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <defs>
             <rect id="path-1" x={0} y="0.427554771" width={175} height={596} />
             <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x={0} y={0} width={175} height={596} fill="white">

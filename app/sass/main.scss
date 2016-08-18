@@ -17,9 +17,10 @@ body {
 }
 .mui--appbar-height.header {
 	font-size: 28px;
-	font-weight: normal;
+	font-weight: bold;
 	padding-left: 50px;
 	letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
 
 }
 .mui-appbar .mui-btn {
@@ -161,7 +162,7 @@ h4 {
 }
 
 .survey {
-	margin: 40px;
+	margin: 40px 0;
 }
 .survey .row {
   margin-bottom: 0px;
@@ -182,6 +183,12 @@ h4 {
 	border-right: 1px dashed #ddd;
   // border: 1px solid rgba(86,61,124,.2);
 
+
+}
+
+.survey > .col-sm-12 {
+  margin: 0 auto;
+  float: none;
 
 }
 
@@ -210,7 +217,10 @@ h4 {
 	background-color: #75787B !important;
 }
 
-
+.col-md-1.col-header {
+    font-size: 12px;
+    font-weight: bold;
+}
 
 
 
@@ -292,4 +302,37 @@ Text Analytics Rows
 	.negative {
 		color: #F47C6D;
 	}
+}
+
+
+
+/*
+Tablet fixes
+
+*/
+@media all and (min-width:768px) and (max-width:1024px) {
+  .col-md-1 {
+    width: 90px;
+  }
+  .col-md-2 {
+    width: 180px;
+  }
+  .col-md-4 {
+    width: 360px;
+  }
+
+  .thermometer {
+    position: absolute;
+    top: 0;
+    right: -25px;
+  }
+
+  .datepick {
+    margin-left: 0;
+  }
+
+  .rating-key {
+
+    margin-right: 30px;
+  }
 }
