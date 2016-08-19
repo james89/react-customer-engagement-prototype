@@ -305,6 +305,13 @@ Text Analytics Rows
 }
 
 
+/*
+Desktop browser width fixes
+
+*/
+.desktop .react-wrapper > .container-fluid {
+  min-width: 980px;
+}
 
 /*
 Tablet fixes
