@@ -75,6 +75,8 @@ export default class MainDashboard extends React.Component {
 
   getJSON () {
     let jsonPath = '';
+    this.setState({initialDataShown: true})
+
     if(this.state.firstOrSecondJSON === 'first'){
       jsonPath = './dashboard2.json'
       this.setState({firstOrSecondJSON: 'second'})
@@ -98,7 +100,7 @@ export default class MainDashboard extends React.Component {
   }
 
 	componentDidMount () {
-    console.log(this);
+
     // request dummy data
     axios.get('./dashboard.json')
       .then(function(result){
@@ -108,7 +110,8 @@ export default class MainDashboard extends React.Component {
           data2: result.data.dashboard.customerExperience.customerSatisfaction,
           easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness,
           positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes,
-          firstOrSecondJSON: 'first'
+          firstOrSecondJSON: 'first',
+          initialDataShown: false
         })
 
       }.bind(this));
@@ -117,10 +120,198 @@ export default class MainDashboard extends React.Component {
 
 	}
 
-	render() {
-
+  shouldRenderTable(){
     let custSatisfactionData = this.state.data2 || '';
     let easeRatings = this.state.easeRatings || '';
+
+         var customerSatisfactionNodes = Object.keys(custSatisfactionData).map(function(rating) {
+
+           if (custSatisfactionData[rating] <= 4){
+             return (
+               <div className="col-md-1 rating-red">
+                 {custSatisfactionData[rating]}
+               </div>
+             )
+
+           } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 7){
+             return (
+               <div className="col-md-1 rating-orange">
+                 {custSatisfactionData[rating]}
+               </div>
+             )
+           } else if (custSatisfactionData[rating] > 7){
+             return (
+               <div className="col-md-1 rating-green">
+                 {custSatisfactionData[rating]}
+               </div>
+             )
+           }
+
+        });
+
+        var easeOfDoingBusinessNodes = Object.keys(easeRatings).map(function(rating) {
+
+          if (easeRatings[rating] <= 4){
+            return (
+              <div className="col-md-1 rating-red">
+                {easeRatings[rating]}
+              </div>
+            )
+
+          } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 7){
+            return (
+              <div className="col-md-1 rating-orange">
+                {easeRatings[rating]}
+              </div>
+            )
+          } else if (easeRatings[rating] > 7){
+            return (
+              <div className="col-md-1 rating-green">
+                {easeRatings[rating]}
+              </div>
+            )
+          }
+
+       });
+
+    if (this.state.startDate && this.state.endDate){
+      return (
+        <div className="survey row">
+          <div className="col-sm-12 col-md-12">
+            {/* Customer Experience - Header Row */}
+            <div className="row row-eq-height">
+              <div className="col-md-1 row-header">Customer Experience</div>
+              <div className="col-md-1 col-header">Seek (T-Mobile)</div>
+              <div className="col-md-1 col-header">Purchase</div>
+              <div className="col-md-1 col-header">Develop First Impression</div>
+              <div className="col-md-1 col-header">Use</div>
+              <div className="col-md-1 col-header">Get Help</div>
+              <div className="col-md-1 col-header">Optimize</div>
+              <div className="col-md-1 col-header">Seek (External)</div>
+              <div className="col-md-1 col-header">Leave</div>
+            </div>
+            {/* Interaction Points */}
+            <div className="row row-eq-height interaction-pts">
+              <div className="col-md-1 row-header">Interaction Points</div>
+              <div className="col-md-1">
+                {/* swap out the html attributes with JS attributes in popover options object (refer to documentation) when JSON data is ready */}
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>A</Button>
+                </OverlayTrigger>
+
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>B</Button>
+                </OverlayTrigger>
+                </div>
+              <div className="col-md-1">
+              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                <Button>C</Button>
+              </OverlayTrigger>
+              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                <Button>D</Button>
+              </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                <Button>E</Button>
+              </OverlayTrigger>
+              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                <Button>F</Button>
+              </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>G</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>H</Button>
+                </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>I</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>J</Button>
+                </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>K</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>L</Button>
+                </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>M</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>N</Button>
+                </OverlayTrigger>
+              </div>
+              <div className="col-md-1">
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>O</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
+                  <Button>P</Button>
+                </OverlayTrigger>
+              </div>
+            </div>
+            {/* Customer Satisfaction */}
+            <div className="row row-eq-height">
+              <div className="col-md-1 row-header light-gray-bg">Customer Satisfaction</div>
+
+              {customerSatisfactionNodes}
+
+              {/* <div className="col-md-1 rating-orange">
+
+              </div>
+              <div className="col-md-1 rating-orange">8</div>
+              <div className="col-md-1 rating-green">9</div>
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" /> */}
+            </div>
+            {/* Ease of Doing Business */}
+            <div className="row row-eq-height">
+              <div className="col-md-1 row-header light-gray-bg">Ease of Doing Business</div>
+              {easeOfDoingBusinessNodes}
+            </div>
+            {/* Text Analytics - Positive Themes */}
+
+              <TextAnalyticsPositiveRow positiveThemes={this.state.positiveRowData} />
+
+
+            {/* Text Analytics - Negative Themes */}
+            <div className="row row-eq-height text-analytics">
+              <div className="col-md-1 row-header"><span>Text Analytics - <span className="negative">Negative Themes</span></span></div>
+              <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
+              <div className="col-md-4 negative">Competitors, Discounts and Offers, Affordability for Price</div>
+              <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
+            </div>{/* /Text Analytics Row */}
+            {/* Feedback Confidence */}
+            <FeedbackConfidenceRow />
+            {/* /Feedback Confidence Row */}
+            <div className="thermometer">
+              <Thermometer />
+            </div>
+
+            </div>
+
+
+        </div>
+      );
+    }
+  }
+
+	render() {
+
+
 
 		let { startDate, endDate } = this.state;
 
@@ -141,56 +332,6 @@ export default class MainDashboard extends React.Component {
 			 startDate,
 			 endDate,
 		 };
-
-     var customerSatisfactionNodes = Object.keys(custSatisfactionData).map(function(rating) {
-
-       if (custSatisfactionData[rating] <= 4){
-         return (
-           <div className="col-md-1 rating-red">
-             {custSatisfactionData[rating]}
-           </div>
-         )
-
-       } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 7){
-         return (
-           <div className="col-md-1 rating-orange">
-             {custSatisfactionData[rating]}
-           </div>
-         )
-       } else if (custSatisfactionData[rating] > 7){
-         return (
-           <div className="col-md-1 rating-green">
-             {custSatisfactionData[rating]}
-           </div>
-         )
-       }
-
-    });
-
-    var easeOfDoingBusinessNodes = Object.keys(easeRatings).map(function(rating) {
-
-      if (easeRatings[rating] <= 4){
-        return (
-          <div className="col-md-1 rating-red">
-            {easeRatings[rating]}
-          </div>
-        )
-
-      } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 7){
-        return (
-          <div className="col-md-1 rating-orange">
-            {easeRatings[rating]}
-          </div>
-        )
-      } else if (easeRatings[rating] > 7){
-        return (
-          <div className="col-md-1 rating-green">
-            {easeRatings[rating]}
-          </div>
-        )
-      }
-
-   });
 
 
 		return (
@@ -233,7 +374,7 @@ export default class MainDashboard extends React.Component {
 										          </DatetimeRangePicker>
 
 									</div>
-									<Button className="datepick-btn" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate}>Go</Button>
+									<Button className="datepick-btn" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button>
 
 								<div className="col-md-3 rating-key">
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -267,135 +408,10 @@ export default class MainDashboard extends React.Component {
 
 	       				</div>
 		          </div> {/* /date pick row */}
-		          <div className="survey row">
-		            <div className="col-sm-12 col-md-12">
-		              {/* Customer Experience - Header Row */}
-		              <div className="row row-eq-height">
-		                <div className="col-md-1 row-header">Customer Experience</div>
-		                <div className="col-md-1 col-header">Seek (T-Mobile)</div>
-		                <div className="col-md-1 col-header">Purchase</div>
-		                <div className="col-md-1 col-header">Develop First Impression</div>
-		                <div className="col-md-1 col-header">Use</div>
-		                <div className="col-md-1 col-header">Get Help</div>
-		                <div className="col-md-1 col-header">Optimize</div>
-		                <div className="col-md-1 col-header">Seek (External)</div>
-		                <div className="col-md-1 col-header">Leave</div>
-		              </div>
-		              {/* Interaction Points */}
-		              <div className="row row-eq-height interaction-pts">
-		                <div className="col-md-1 row-header">Interaction Points</div>
-		                <div className="col-md-1">
-		                  {/* swap out the html attributes with JS attributes in popover options object (refer to documentation) when JSON data is ready */}
-											<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-												<Button>A</Button>
-											</OverlayTrigger>
 
-											<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-												<Button>B</Button>
-											</OverlayTrigger>
-											</div>
-		                <div className="col-md-1">
-										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-											<Button>C</Button>
-										</OverlayTrigger>
-										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-											<Button>D</Button>
-										</OverlayTrigger>
-		                </div>
-		                <div className="col-md-1">
-										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-											<Button>E</Button>
-										</OverlayTrigger>
-										<OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-											<Button>F</Button>
-										</OverlayTrigger>
-		                </div>
-		                <div className="col-md-1">
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>G</Button>
-                      </OverlayTrigger>
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>H</Button>
-                      </OverlayTrigger>
-                    </div>
-                    <div className="col-md-1">
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>I</Button>
-                      </OverlayTrigger>
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>J</Button>
-                      </OverlayTrigger>
-                    </div>
-                    <div className="col-md-1">
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>K</Button>
-                      </OverlayTrigger>
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>L</Button>
-                      </OverlayTrigger>
-                    </div>
-                    <div className="col-md-1">
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>M</Button>
-                      </OverlayTrigger>
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>N</Button>
-                      </OverlayTrigger>
-                    </div>
-                    <div className="col-md-1">
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>O</Button>
-                      </OverlayTrigger>
-                      <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                        <Button>P</Button>
-                      </OverlayTrigger>
-                    </div>
-		              </div>
-		              {/* Customer Satisfaction */}
-		              <div className="row row-eq-height">
-		                <div className="col-md-1 row-header light-gray-bg">Customer Satisfaction</div>
-
-                    {customerSatisfactionNodes}
-
-                    {/* <div className="col-md-1 rating-orange">
-
-		                </div>
-		                <div className="col-md-1 rating-orange">8</div>
-		                <div className="col-md-1 rating-green">9</div>
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" />
-		                <div className="col-md-1" /> */}
-		              </div>
-		              {/* Ease of Doing Business */}
-		              <div className="row row-eq-height">
-		                <div className="col-md-1 row-header light-gray-bg">Ease of Doing Business</div>
-		                {easeOfDoingBusinessNodes}
-		              </div>
-		              {/* Text Analytics - Positive Themes */}
-
-                    <TextAnalyticsPositiveRow positiveThemes={this.state.positiveRowData} />
-
-
-		              {/* Text Analytics - Negative Themes */}
-		              <div className="row row-eq-height text-analytics">
-		                <div className="col-md-1 row-header"><span>Text Analytics - <span className="negative">Negative Themes</span></span></div>
-		                <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
-		                <div className="col-md-4 negative">Competitors, Discounts and Offers, Affordability for Price</div>
-		                <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
-		              </div>{/* /Text Analytics Row */}
-		              {/* Feedback Confidence */}
-                  <FeedbackConfidenceRow />
-		              {/* /Feedback Confidence Row */}
-									<div className="thermometer">
-										<Thermometer />
-									</div>
-
-									</div>
-
-
-		          </div> {/* /survey table */}
+              {/* First page load dont show table data. If user selects date range, show data as expected. */}
+              
+              { this.state.initialDataShown ? this.shouldRenderTable() : null }
 
 					</div>
 
