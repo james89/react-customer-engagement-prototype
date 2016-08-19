@@ -16,14 +16,14 @@ import TextAnalyticsPositiveRow from '../textAnalyticsPositiveRow/text-analytics
 const popoverHoverFocus = (
   <Popover id="popover-trigger-hover-focus" title="Buy New Device & Services">
 
-		<p>
-Learn how to Upgrade/JUMP Device!
-Learn how to Add New Line of Service
-Select / Purchase New Device
-Add Services & Features
-Add New Line of Service
-Review & Confirm Account Updates</p>
-<Button>See Detailed View</Button>
+    		<p>
+    Learn how to Upgrade/JUMP Device!
+    Learn how to Add New Line of Service
+    Select / Purchase New Device
+    Add Services & Features
+    Add New Line of Service
+    Review & Confirm Account Updates</p>
+    <Button>See Detailed View</Button>
   </Popover>
 );
 
@@ -214,6 +214,7 @@ export default class MainDashboard extends React.Component {
 								<div className="datepicker">
 
 										          <DatetimeRangePicker
+                                autoApply={true}
 										            autoUpdateInput={false}
 										            locale={locale}
 										            onApply={this.handleApply}
