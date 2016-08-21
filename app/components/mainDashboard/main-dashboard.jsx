@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Popover, Overlay, OverlayTrigger, Button } from 'react-bootstrap';
 import DatetimeRangePicker from 'react-bootstrap-datetimerangepicker';
 import axios from 'axios';
+import { Link } from 'react-router';
 
 
 import Thermometer from '../thermometer/thermometer.jsx';
@@ -343,8 +344,10 @@ export default class MainDashboard extends React.Component {
 	            <tbody><tr style={{verticalAlign: 'middle'}}>
 	                <td className="mui--appbar-height header">Unified Customer Feedback</td>
 	                <td className="nav-items" align="right">
-	                  <a href="/" className="mui-btn mui-btn--primary active">Main Dashboard</a>
-	                  <a href="/channel.html" className="mui-btn mui-btn--primary">Channel Dashboard</a>
+                    <Link to="/" className="mui-btn mui-btn--primary active">Main Dashboard</Link>
+                    <Link to="/channel" className="mui-btn mui-btn--primary">Channel Dashboard</Link>
+
+
 	                </td>
 	              </tr>
 	            </tbody></table>
@@ -410,7 +413,7 @@ export default class MainDashboard extends React.Component {
 		          </div> {/* /date pick row */}
 
               {/* First page load dont show table data. If user selects date range, show data as expected. */}
-              
+
               { this.state.initialDataShown ? this.shouldRenderTable() : null }
 
 					</div>

@@ -1,11 +1,21 @@
 import React from 'react';
-import MainDashboard from './components/my-component/my-component.jsx';
+import ReactDOM from 'react-dom';
+import MainDashboard from './components/mainDashboard/main-dashboard.jsx';
+import ChannelDashboard from './components/channelDashboard/channel-dashboard.jsx';
+import ReactRouter from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-export default class App extends React.Component {
-	render() {
+
+
+class App extends React.Component {
+	render(){
 		return (
-				<MainDashboard  />
-
-		);
+			<Router history={ hashHistory }>
+   			<Route path='/' component={MainDashboard}></Route>
+				<Route path='/channel' component={ChannelDashboard}></Route>
+   		</Router>
+		)
 	}
 }
+
+export default App;
