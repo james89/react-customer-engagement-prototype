@@ -8,33 +8,38 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 
 const LayoutLarge = [
-  {i: 'digital', x: 0, y: 0, w: 1,  h: 3, maxW: 3},
-  {i: 'callCenter', x: 1, y: 0, w: 1, h: 3, maxW: 3},
-  {i: 'inStore', x: 2, y: 0, w: 1, h: 3, maxW: 3}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 3, maxW: 4},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 3, maxW: 4},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 3, maxW: 4}
 ];
 
 
 
 const LayoutMedium = [
-  {i: 'digital', x: 0, y: 0, w: 2,  h: 3},
-  {i: 'callCenter', x: 3, y: 0, w: 2, h: 3},
-  {i: 'inStore', x: 6, y: 0, w: 2, h: 3}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 3},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 3},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 3}
 ];
 
 const LayoutSmall = [
-  {i: 'digital', x: 0, y: 0, w: 3,  h: 3, maxW: 3},
-  {i: 'callCenter', x: 0, y: 0, w: 3, h: 3, maxW: 3},
-  {i: 'inStore', x: 0, y: 0, w: 3, h: 3, maxW: 3}
+  {i: 'digital', x: 2, y: 0, w: 8,  h: 3},
+  {i: 'callCenter', x: 2, y: 0, w: 8, h: 3},
+  {i: 'inStore', x: 2, y: 0, w: 8, h: 3}
 ];
-
+const LayoutXS = [
+  {i: 'digital', x: 1, y: 0, w: 6,  h: 3},
+  {i: 'callCenter', x: 1, y: 0, w: 6, h: 3},
+  {i: 'inStore', x: 1, y: 0, w: 6, h: 3}
+]
 const Layouts = {
   lg: LayoutLarge,
   md: LayoutMedium,
   sm: LayoutSmall,
+  xs: LayoutXS
 }
 
 const ChannelDashboard = () => (
-  <div className="react-wrapper">
+  <div className="react-wrapper" id="channel">
 
       {/* <div className="mui-appbar">
 
@@ -52,10 +57,45 @@ const ChannelDashboard = () => (
         </table>
       </div> */}
 
-      <ResponsiveReactGridLayout layouts={Layouts} margin={[30,30]} cols={{lg: 3, md: 9, sm: 3}} breakpoints={{lg: 1200, md: 996, sm: 768}}>
-        <div className="grid-item" key={'digital'}>1</div>
-        <div className="grid-item" key={'callCenter'}>2</div>
-        <div className="grid-item" key={'inStore'}>3</div>
+      <ResponsiveReactGridLayout layouts={Layouts} margin={[60,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480}} width={1200} isResizable={false}>
+        <div className="grid-item" key={'digital'}>
+
+          {/*
+            DONUT CHART EXAMPLE - USES VICTORY REACT LIBRARY
+            http://jsbin.com/wavoya/1/edit?html,css,js,console,output
+
+            DONUT CHART EXAMPLE - USING HIGHCHARTS
+            http://fiddle.jshell.net/anshul24mehta/pywn6wwz/
+
+            DONUT CHART EXAMPLE - USING D3
+            http://www.reactd3.org/docs/basic/#donut
+
+            */}
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="grid-item" key={'callCenter'}>
+          2
+        </div>
+        <div className="grid-item" key={'inStore'}>
+          3
+        </div>
 
       </ResponsiveReactGridLayout>
   </div>
