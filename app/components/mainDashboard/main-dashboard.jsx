@@ -346,8 +346,6 @@ export default class MainDashboard extends React.Component {
 	                <td className="nav-items" align="right">
                     <Link to="/" className="mui-btn mui-btn--primary active">Main Dashboard</Link>
                     <Link to="/channel" className="mui-btn mui-btn--primary">Channel Dashboard</Link>
-
-
 	                </td>
 	              </tr>
 	            </tbody></table>
