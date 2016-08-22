@@ -9,10 +9,22 @@
 }
 .donut-chart {
   position: relative;
-  width: 50%;
+  width: 40%;
   margin: auto;
 
+  .donut-rating.rating-red {
+    color: #E7575C;
 
+  }
+  .donut-rating.rating-green {
+  	color: #658F2F;
+  }
+  .donut-rating.rating-orange {
+    color: #EE9825;
+  }
+  svg g text {
+    display: none;
+  }
 }
 
 .donut-rating {
@@ -20,10 +32,13 @@
   height: 50px;
   overflow: visible;;
   text-align: center;
+  font-weight: bold;
   font-size: 30px;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+
+
 }
 
 #channel .react-grid-layout table, #channel .react-grid-layout th {
@@ -34,6 +49,7 @@
 }
 #channel .react-grid-layout table {
   border-top-color: #010202;
+  border-bottom-style: none !important;
 
   .rating-green {
   	background: #85BC40;
@@ -82,4 +98,27 @@
 
 
 
+}
+
+.fb-theme-header {
+  background: #404040;
+  color: #fff;
+  th {
+    font-weight: normal;
+    letter-spacing: 1px;
+    border-color: #010202 !important;
+    border-width: 1px !important;
+  }
+
+}
+
+.green-text {
+  color: #85BC40;
+}
+.red-text {
+  color: #F47C6D;
+  border-bottom: transparent !important;
+}
+tr td {
+  text-transform: none !important;
 }

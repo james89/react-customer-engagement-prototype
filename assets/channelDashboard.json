@@ -1,0 +1,98 @@
+{
+  "channelDashboard": {
+    "dateFormat": "ddMMyyyy",
+    "fromDate": "01112015",
+    "satisfactionrate": [
+      {
+        "channel": "Digital",
+        "chart": [
+          {
+            "customerEffor": 7,
+            "customerSatisfaction": 7,
+            "experience": "seek (T-Mobile)"
+          },
+          {
+            "customerEffor": 7,
+            "customerSatisfaction": 7,
+            "experience": "purchase"
+          },
+          {
+            "customerEffor": 4,
+            "customerSatisfaction": 5,
+            "experience": "Get Help"
+          },
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 8,
+            "experience": "Optimize"
+          },
+          {
+            "customerEffor": 6,
+            "customerSatisfaction": 6,
+            "experience": "seek (External)"
+          }
+        ],
+        "overall_score": 3,
+        "topNegativeThemes": "Website Functionality & Performance, Helpful and Accurate Information, Relevance/Helpfulness of Information",
+        "topPositiveThemes": "Device – Screen, Feature SIM Card, Stability - Reboot"
+      },
+      {
+        "channel": "Call Center",
+        "chart": [
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 8,
+            "experience": "Purchase"
+          },
+          {
+            "customerEffor": 7,
+            "customerSatisfaction": 7,
+            "experience": "First Impression"
+          },
+          {
+            "customerEffor": 9,
+            "customerSatisfaction": 8,
+            "experience": "Get Help"
+          },
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 8,
+            "experience": "Optimize"
+          }
+        ],
+        "overall_score": 8,
+        "topNegativeThemes": "Issue Resolution, Follow-up, Listening",
+        "topPositiveThemes": "Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+      },
+      {
+        "channel": "In Store",
+        "chart": [
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 9,
+            "experience": "Purchase"
+          },
+          {
+            "customerEffor": 7,
+            "customerSatisfaction": 7,
+            "experience": "First Impression"
+          },
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 8,
+            "experience": "Get Help"
+          },
+          {
+            "customerEffor": 8,
+            "customerSatisfaction": 8,
+            "experience": "Optimize"
+          }
+        ],
+        "overall_score": 6,
+        "topNegativeThemes": "Upselling, Manager/Supervisor",
+        "topPositiveThemes": "Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+      }
+    ],
+    "toDate": "25022016"
+  }
+}
