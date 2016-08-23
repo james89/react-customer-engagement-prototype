@@ -58,6 +58,11 @@
             "customerEffor": 8,
             "customerSatisfaction": 8,
             "experience": "Optimize"
+          },
+          {
+            "customerEffor": 6,
+            "customerSatisfaction": 6,
+            "experience": "seek (External)"
           }
         ],
         "overall_score": 8,
@@ -86,6 +91,11 @@
             "customerEffor": 8,
             "customerSatisfaction": 8,
             "experience": "Optimize"
+          },
+          {
+            "customerEffor": 6,
+            "customerSatisfaction": 6,
+            "experience": "seek (External)"
           }
         ],
         "overall_score": 6,
