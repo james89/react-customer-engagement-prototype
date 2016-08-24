@@ -1,4 +1,6 @@
 $icon-font-path: "../../";
+$grid-columns:              9;
+$grid-gutter-width:         10px;
 
 @import 'bootstrap'; // loaded via bower
 @import 'bootstrap-daterangepicker';

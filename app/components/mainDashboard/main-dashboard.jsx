@@ -191,6 +191,28 @@ export default class MainDashboard extends React.Component {
               <div className="col-md-1 col-header">Seek (External)</div>
               <div className="col-md-1 col-header">Leave</div>
             </div>
+            {/* Customer Satisfaction */}
+            <div className="row row-eq-height fb-ratings">
+              <div className="col-md-1 row-header">Customer Satisfaction</div>
+
+              {customerSatisfactionNodes}
+
+              {/* <div className="col-md-1 rating-orange">
+
+              </div>
+              <div className="col-md-1 rating-orange">8</div>
+              <div className="col-md-1 rating-green">9</div>
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" /> */}
+            </div>
+            {/* Ease of Doing Business */}
+            <div className="row row-eq-height fb-ratings">
+              <div className="col-md-1 row-header">Ease of Doing Business</div>
+              {easeOfDoingBusinessNodes}
+            </div>
             {/* Interaction Points */}
             <div className="row row-eq-height interaction-pts">
               <div className="col-md-1 row-header">Interaction Points</div>
@@ -261,28 +283,7 @@ export default class MainDashboard extends React.Component {
                 </OverlayTrigger>
               </div>
             </div>
-            {/* Customer Satisfaction */}
-            <div className="row row-eq-height">
-              <div className="col-md-1 row-header light-gray-bg">Customer Satisfaction</div>
 
-              {customerSatisfactionNodes}
-
-              {/* <div className="col-md-1 rating-orange">
-
-              </div>
-              <div className="col-md-1 rating-orange">8</div>
-              <div className="col-md-1 rating-green">9</div>
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" /> */}
-            </div>
-            {/* Ease of Doing Business */}
-            <div className="row row-eq-height">
-              <div className="col-md-1 row-header light-gray-bg">Ease of Doing Business</div>
-              {easeOfDoingBusinessNodes}
-            </div>
             {/* Text Analytics - Positive Themes */}
 
               <TextAnalyticsPositiveRow positiveThemes={this.state.positiveRowData} />
@@ -290,7 +291,7 @@ export default class MainDashboard extends React.Component {
 
             {/* Text Analytics - Negative Themes */}
             <div className="row row-eq-height text-analytics">
-              <div className="col-md-1 row-header"><span>Text Analytics - <span className="negative">Negative Themes</span></span></div>
+              <div className="col-md-1 row-header"><span>Text Analytics - <br/> <span className="negative">Negative Themes</span></span></div>
               <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
               <div className="col-md-4 negative">Competitors, Discounts and Offers, Affordability for Price</div>
               <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
@@ -298,9 +299,6 @@ export default class MainDashboard extends React.Component {
             {/* Feedback Confidence */}
             <FeedbackConfidenceRow />
             {/* /Feedback Confidence Row */}
-            <div className="thermometer">
-              <Thermometer />
-            </div>
 
             </div>
 

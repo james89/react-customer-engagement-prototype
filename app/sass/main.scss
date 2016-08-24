@@ -3,20 +3,20 @@
 
 
 body {
-  background: #F6F5F5;
+  background: #f9f9f9;
 	font-family: 'Open Sans', sans-serif;
 }
 .mui-appbar {
   color: #85BC40;
   background: #010202;
-	min-height: 80px;
+	min-height: 50px;
 
 }
 .mui--appbar-height {
-	height: 80px;
+	height: 50px;
 }
 .mui--appbar-height.header {
-	font-size: 28px;
+	font-size: 20px;
 	font-weight: bold;
 	padding-left: 50px;
 	letter-spacing: 1px;
@@ -53,7 +53,7 @@ Datepicker + Dropdown
   display: inline-block;
 }
 .datepick {
-	margin-top: 30px;
+	margin-top: 15px;
   margin-left: 30px;
 
 
@@ -179,8 +179,8 @@ h4 {
   // background-color: rgba(86,61,124,.15);
   border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	border-left: 1px dashed #ddd;
-	border-right: 1px dashed #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
   // border: 1px solid rgba(86,61,124,.2);
 
 
@@ -197,24 +197,33 @@ h4 {
 }
 
 .row-header {
-	background-color: #404040 !important;
+	background-color: transparent !important;
 	border-style: none !important;
-	color: #fff;
+	color: #454545;
 	font-weight: normal;
+  font-size: 12px;
+  align-items: stretch !important;
+text-align: left;
+justify-content: flex-start !important;
 }
 
 .col-header {
-	background-color: rgba(133,188,64,.15) !important;
+	background-color: transparent !important;
 	text-transform: uppercase;
 	font-size: 10px;
 	text-align: center;
 	color: #84BC40;
 	letter-spacing: .1em;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+}
+.survey .row-eq-height > .col-header:last-of-type {
+  border-right: none !important;
 }
 
-
 .row-header.light-gray-bg {
-	background-color: #75787B !important;
+	background-color: #d0d0d0 !important;
 }
 
 .col-md-1.col-header {
@@ -244,7 +253,9 @@ Interaction points Row
 	color: #fff;
 }
 
-
+.interaction-pts .col-md-1 {
+  max-height: 60px;
+}
 
 /*
 
@@ -252,6 +263,9 @@ Customer Satisfaction Row
 
 */
 
+.fb-ratings .col-md-1 {
+  max-height: 70px;
+}
 .row .rating-green {
 	background: #85BC40;
 	color: #658F2F;
@@ -270,7 +284,7 @@ Customer Satisfaction Row
 	color: #EE9825;
 	align-items: center;
 	justify-content: center;
-	min-height: 100px;
+
 }
 
 .row .rating-red {
@@ -283,7 +297,6 @@ Customer Satisfaction Row
 	color: #E7575C;
 	align-items: center;
 	justify-content: center;
-	min-height: 100px;
 }
 
 
@@ -323,13 +336,13 @@ Tablet fixes
 */
 @media all and (min-width:768px) and (max-width:1024px) {
   .col-md-1 {
-    width: 90px;
+    width: 120px;
   }
   .col-md-2 {
-    width: 180px;
+    width: 240px;
   }
   .col-md-4 {
-    width: 360px;
+    width: 480px;
   }
 
   .thermometer {
