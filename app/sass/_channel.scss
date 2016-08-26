@@ -6,11 +6,12 @@
   text-align: center;
   font-size: 24px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .donut-chart {
   position: relative;
-  width: 40%;
+  width: auto;
   margin: auto;
 
   .donut-rating.rating-red {
@@ -51,6 +52,7 @@
 #channel .react-grid-layout table {
   border-top-color: #010202;
   border-bottom-style: none !important;
+  margin-top: 15px;
 
   .rating-green {
   	background: #85BC40;
@@ -154,4 +156,6 @@ tr td {
 
 .CircularProgress {
     transform: rotate(-90deg);
+    display: block;
+    margin: 0 auto;
 }

@@ -130,20 +130,20 @@ export default class MainDashboard extends React.Component {
            if (custSatisfactionData[rating] <= 4){
              return (
                <div className="col-md-1 rating-red">
-                 {custSatisfactionData[rating]}
+                 <span>{custSatisfactionData[rating]}</span>
                </div>
              )
 
            } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 7){
              return (
                <div className="col-md-1 rating-orange">
-                 {custSatisfactionData[rating]}
+                 <span>{custSatisfactionData[rating]}</span>
                </div>
              )
            } else if (custSatisfactionData[rating] > 7){
              return (
                <div className="col-md-1 rating-green">
-                 {custSatisfactionData[rating]}
+                 <span>{custSatisfactionData[rating]}</span>
                </div>
              )
            }
@@ -155,20 +155,20 @@ export default class MainDashboard extends React.Component {
           if (easeRatings[rating] <= 4){
             return (
               <div className="col-md-1 rating-red">
-                {easeRatings[rating]}
+                <span>{easeRatings[rating]}</span>
               </div>
             )
 
           } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 7){
             return (
               <div className="col-md-1 rating-orange">
-                {easeRatings[rating]}
+                <span>{easeRatings[rating]}</span>
               </div>
             )
           } else if (easeRatings[rating] > 7){
             return (
               <div className="col-md-1 rating-green">
-                {easeRatings[rating]}
+                <span>{easeRatings[rating]}</span>
               </div>
             )
           }

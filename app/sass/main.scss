@@ -16,7 +16,7 @@ body {
 	height: 50px;
 }
 .mui--appbar-height.header {
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: bold;
 	padding-left: 50px;
 	letter-spacing: 1px;
@@ -35,6 +35,11 @@ body {
 	vertical-align: bottom;
 	.mui-btn {
 		margin: 0;
+    font-size: 12px;
+float: right;
+height: 30px;
+border-radius: 0px;
+line-height: 30px;
 	}
 }
 
@@ -46,7 +51,6 @@ Datepicker + Dropdown
 */
 .rating-key {
 	float: right;
-  margin-right: 250px;
 }
 .datepicker {
   max-width: 400px;
@@ -65,8 +69,8 @@ Datepicker + Dropdown
 		border-style: none;
 	}
 
-	input {
-
+	.input-group {
+    width: 300px;
 	}
 
 	.datepick-btn {
@@ -76,8 +80,9 @@ Datepicker + Dropdown
     display: inline-table;
     vertical-align: top;
     background: white;
-    border: 2px solid #85BC40;
+    border: 1px solid #85BC40;
     margin-left: 20px;
+    margin-top: 1px;
 	}
 
   .datepick-btn[disabled], .datepick-btn[disabled]:hover {
@@ -162,7 +167,7 @@ h4 {
 }
 
 .survey {
-	margin: 40px 0;
+	margin: 10px;
 }
 .survey .row {
   margin-bottom: 0px;
@@ -173,16 +178,17 @@ h4 {
 }
 
 .survey .row-eq-height [class*="col-"] {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   // background-color: #F6F5F5;
   // background-color: rgba(86,61,124,.15);
-  border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
+	// border-bottom: 1px solid #ddd;
+	// border-left: 1px solid #ddd;
+	// border-right: 1px solid #ddd;
   // border: 1px solid rgba(86,61,124,.2);
-
+  background: #e6e6e6;
+  margin: 3px;
 
 }
 
@@ -197,7 +203,7 @@ h4 {
 }
 
 .row-header {
-	background-color: transparent !important;
+	background-color: #b5b5b5 !important;
 	border-style: none !important;
 	color: #454545;
 	font-weight: normal;
@@ -213,7 +219,7 @@ justify-content: flex-start !important;
 	font-size: 10px;
 	text-align: center;
 	color: #84BC40;
-	letter-spacing: .1em;
+	letter-spacing: .05em;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   border: none !important;
@@ -232,7 +238,9 @@ justify-content: flex-start !important;
 }
 
 
-
+.text-analytics {
+  font-size: 12px;
+}
 /*
 
 Interaction points Row
@@ -267,17 +275,17 @@ Customer Satisfaction Row
   max-height: 70px;
 }
 .row .rating-green {
-	background: #85BC40;
+	// background: #85BC40;
 	color: #658F2F;
-	border: 1px solid #658F2F !important;
+	// border: 1px solid #658F2F !important;
 	font-size: 30px;
 	font-weight: bold;
 }
 
 .row .rating-orange {
 	display: inline-flex;
-	background: #FED86F;
-	border: 1px solid #EE9825 !important;
+	// background: #FED86F;
+	// border: 1px solid #EE9825 !important;
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
@@ -289,8 +297,8 @@ Customer Satisfaction Row
 
 .row .rating-red {
 	display: inline-flex;
-	background: #FD8D90;
-	border: 1px solid #E7575C !important;
+	// background: #FD8D90;
+	// border: 1px solid #E7575C !important;
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
@@ -299,6 +307,12 @@ Customer Satisfaction Row
 	justify-content: center;
 }
 
+.fb-ratings span {
+  border-radius: 50%;
+  border: 5px solid grey;
+
+  padding: 0px 15px 0 15px;
+}
 
 
 /*
@@ -358,5 +372,15 @@ Tablet fixes
   .rating-key {
 
     margin-right: 30px;
+  }
+}
+
+
+@media (min-width:992px){
+  .text-analytics .col-md-2 {
+    width: 22.52222%;
+  }
+  .text-analytics .col-md-4 {
+    width: 45.94444%;
   }
 }
