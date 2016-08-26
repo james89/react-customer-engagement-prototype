@@ -28,14 +28,14 @@ const LayoutMedium = [
 ];
 
 const LayoutSmall = [
-  {i: 'digital', x: 2, y: 0, w: 8,  h: 6},
-  {i: 'callCenter', x: 2, y: 0, w: 8, h: 6},
-  {i: 'inStore', x: 2, y: 0, w: 8, h: 6}
+  {i: 'digital', x: 2, y: 0, w: 8,  h: 4},
+  {i: 'callCenter', x: 2, y: 0, w: 8, h: 4},
+  {i: 'inStore', x: 2, y: 0, w: 8, h: 4}
 ];
 const LayoutXS = [
-  {i: 'digital', x: 1, y: 0, w: 6,  h: 7},
-  {i: 'callCenter', x: 1, y: 0, w: 6, h: 7},
-  {i: 'inStore', x: 1, y: 0, w: 6, h: 7}
+  {i: 'digital', x: 1, y: 0, w: 6,  h: 5},
+  {i: 'callCenter', x: 1, y: 0, w: 6, h: 5},
+  {i: 'inStore', x: 1, y: 0, w: 6, h: 5}
 ]
 const Layouts = {
   lg: LayoutLarge,
