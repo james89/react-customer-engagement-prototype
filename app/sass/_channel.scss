@@ -130,6 +130,7 @@ tr td {
 :root {
     --progress-bg-color: #ddd;
     // --progress-fg-color: #2ecc40;
+
 }
 
 .CircularProgress-Bg,
@@ -142,9 +143,11 @@ tr td {
 }
 
 .CircularProgress-Fg {
-    transition: stroke-dashoffset .5s ease-in-out;
+    transition: stroke-dashoffset .8s ease-in-out;
     // stroke: var(--progress-fg-color);
+
 }
+
 
 .CircularProgress-Text {
     font-family: sans-serif;

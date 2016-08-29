@@ -180,7 +180,7 @@ export default class MainDashboard extends React.Component {
         <div className="survey row">
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
-            <div className="row row-eq-height">
+            <div className="row row-eq-height table-header">
               <div className="col-md-1 row-header">Customer Experience</div>
               <div className="col-md-1 col-header">Seek (T-Mobile)</div>
               <div className="col-md-1 col-header">Purchase</div>
@@ -315,15 +315,15 @@ export default class MainDashboard extends React.Component {
 		let { startDate, endDate } = this.state;
 
 		 let label = '';
-		 let start = startDate && startDate.format('YYYY-MM-DD') || '';
-		 let end = endDate && endDate.format('YYYY-MM-DD') || '';
-		 label = start + ' - ' + end;
+		 let start = startDate && startDate.format('MMM DD, YYYY') || '';
+		 let end = endDate && endDate.format('MMM DD, YYYY') || '';
+		 label = start + ' — ' + end;
 		 if (start === end) {
 			 label = start;
 		 }
 
 		 let locale = {
-			 format: 'YYYY-MM-DD',
+			 format: 'MMM DD, YYYY',
 			 cancelLabel: 'Clear',
 		 };
 
@@ -350,12 +350,13 @@ export default class MainDashboard extends React.Component {
 							</div>
 	        <div className="container-fluid">
 
-		          <div className="row datepick">
-								<div className="datepicker">
+		          <div className="row datepick clearfix">
+								<div className="datepicker col-md-4">
 
 										          <DatetimeRangePicker
                                 autoApply={true}
 										            autoUpdateInput={false}
+                                dateFormat={'MMM DD YYYY'}
 										            locale={locale}
 										            onApply={this.handleApply}
 										            onCancel={this.handleCancel}
@@ -363,19 +364,24 @@ export default class MainDashboard extends React.Component {
 										          >
 
 										            <div className="input-group">
-										              <input placeholder="Please select a date range" type="text" className="form-control" value={label}/>
-										                <span className="input-group-btn">
+                                <div className="input-group-addon">From:</div>
+										              <input type="text" className="form-control" value={label}/>
+										                {/* <span className="input-group-btn">
 										                    <Button className="default date-range-toggle">
 										                      <i className="fa fa-calendar glyphicon glyphicon-calendar"/>
 										                    </Button>
-										                </span>
+										                </span> */}
 										            </div>
 										          </DatetimeRangePicker>
-
+                              	<Button className="datepick-btn col-md-3" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button>
 									</div>
-									<Button className="datepick-btn" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button>
 
-								<div className="col-md-3 rating-key">
+                  <div className="nps-score col-md-2">
+                    <span>NPS SCORE</span>
+                    <span className="nps-number"> VAL</span>
+                  </div>
+								<div className="rating-key col-md-3">
+
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 											<defs>
 												<rect id="path-1" x={0} y={0} width={325} height={50} />

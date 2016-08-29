@@ -1,6 +1,7 @@
 $icon-font-path: "../../";
 $grid-columns:              9;
 $grid-gutter-width:         10px;
+$input-height-base: 50px;
 
 @import 'bootstrap'; // loaded via bower
 @import 'bootstrap-daterangepicker';
