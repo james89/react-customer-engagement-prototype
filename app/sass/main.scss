@@ -251,6 +251,9 @@ h4 {
 	font-weight: normal;
   text-transform: uppercase;
   font-size: 10px;
+  letter-spacing: .1em;
+  font-weight: 600;
+
 text-align: left;
 justify-content: flex-start !important;
 }
@@ -260,8 +263,8 @@ justify-content: flex-start !important;
 	text-transform: uppercase;
 	font-size: 10px;
 	text-align: center;
-	color: #84BC40;
-	letter-spacing: .05em;
+	color: #fff;
+  letter-spacing: .1em;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   border: none !important;
@@ -275,13 +278,26 @@ justify-content: flex-start !important;
 }
 
 .col-md-1.col-header {
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+
 }
 
 
 .text-analytics {
   font-size: 12px;
+}
+
+
+.table-header {
+  background-color: #222222 !important;
+  color: #fff;
+  padding: 20px 0;
+  // prevent icon overlap
+  .col-md-1 {
+    padding-left: 30px;
+  }
 }
 /*
 
@@ -314,7 +330,7 @@ Customer Satisfaction Row
 */
 
 .fb-ratings .col-md-1 {
-  max-height: 70px;
+  // max-height: 70px;
 }
 .row .rating-green {
 	// background: #85BC40;
@@ -415,4 +431,17 @@ Tablet fixes
 
     margin-right: 30px;
   }
+}
+
+
+
+
+/*
+
+ICONS
+
+*/
+
+.cust-exp {
+  background: url('/icons/cust_exp.png') left no-repeat !important;
 }

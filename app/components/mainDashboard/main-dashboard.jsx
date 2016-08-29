@@ -181,37 +181,15 @@ export default class MainDashboard extends React.Component {
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
             <div className="row row-eq-height table-header">
-              <div className="col-md-1 row-header">Customer Experience</div>
-              <div className="col-md-1 col-header">Seek (T-Mobile)</div>
-              <div className="col-md-1 col-header">Purchase</div>
-              <div className="col-md-1 col-header">Develop First Impression</div>
-              <div className="col-md-1 col-header">Use</div>
-              <div className="col-md-1 col-header">Get Help</div>
-              <div className="col-md-1 col-header">Optimize</div>
-              <div className="col-md-1 col-header">Seek (External)</div>
-              <div className="col-md-1 col-header">Leave</div>
-            </div>
-            {/* Customer Satisfaction */}
-            <div className="row row-eq-height fb-ratings">
-              <div className="col-md-1 row-header">Customer Satisfaction</div>
-
-              {customerSatisfactionNodes}
-
-              {/* <div className="col-md-1 rating-orange">
-
-              </div>
-              <div className="col-md-1 rating-orange">8</div>
-              <div className="col-md-1 rating-green">9</div>
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" /> */}
-            </div>
-            {/* Ease of Doing Business */}
-            <div className="row row-eq-height fb-ratings">
-              <div className="col-md-1 row-header">Ease of Doing Business</div>
-              {easeOfDoingBusinessNodes}
+              <div className="col-md-1 row-header cust-exp">Customer Experience</div>
+              <div className="col-md-1 col-header seek">Seek (T-Mobile)</div>
+              <div className="col-md-1 col-header purchase">Purchase</div>
+              <div className="col-md-1 col-header first-imp">Develop First Impression</div>
+              <div className="col-md-1 col-header use">Use</div>
+              <div className="col-md-1 col-header get-help">Get Help</div>
+              <div className="col-md-1 col-header opti">Optimize</div>
+              <div className="col-md-1 col-header seek-ext">Seek (External)</div>
+              <div className="col-md-1 col-header leave">Leave</div>
             </div>
             {/* Interaction Points */}
             <div className="row row-eq-height interaction-pts">
@@ -283,6 +261,29 @@ export default class MainDashboard extends React.Component {
                 </OverlayTrigger>
               </div>
             </div>
+            {/* Customer Satisfaction */}
+            <div className="row row-eq-height fb-ratings">
+              <div className="col-md-1 row-header">Customer Satisfaction</div>
+
+              {customerSatisfactionNodes}
+
+              {/* <div className="col-md-1 rating-orange">
+
+              </div>
+              <div className="col-md-1 rating-orange">8</div>
+              <div className="col-md-1 rating-green">9</div>
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" />
+              <div className="col-md-1" /> */}
+            </div>
+            {/* Ease of Doing Business */}
+            <div className="row row-eq-height fb-ratings">
+              <div className="col-md-1 row-header">Ease of Doing Business</div>
+              {easeOfDoingBusinessNodes}
+            </div>
+
 
             {/* Text Analytics - Positive Themes */}
 
