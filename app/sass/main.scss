@@ -1,7 +1,6 @@
 @import 'imports';
 
 
-
 body {
   background: #f9f9f9;
 	font-family: 'Open Sans', sans-serif;
@@ -226,10 +225,12 @@ h4 {
 }
 
 .survey .row-eq-height [class*="col-"] {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 35px 20px 35px 0px;
 
-  border: 1px solid #EFEFEF;
+  border-left: 1px solid #EFEFEF !important;
+  border-bottom: 1px solid #EFEFEF !important;
+  border-top: none;
+  box-shadow: 0 0 1px #222;
   background: #F9F9F9;
 
 }
@@ -293,10 +294,10 @@ justify-content: flex-start !important;
 .table-header {
   background-color: #222222 !important;
   color: #fff;
-  padding: 20px 0;
+  // padding: 20px 0;
   // prevent icon overlap
   .col-md-1 {
-    padding-left: 30px;
+    // padding-left: 30px;
   }
 }
 /*
@@ -320,7 +321,7 @@ Interaction points Row
 }
 
 .interaction-pts .col-md-1 {
-  max-height: 60px;
+  // max-height: 60px;
 }
 
 /*
@@ -366,10 +367,10 @@ Customer Satisfaction Row
 }
 
 .fb-ratings span {
-  border-radius: 50%;
-  border: 5px solid grey;
-
-  padding: 0px 15px 0 15px;
+  // border-radius: 50%;
+  // border: 5px solid grey;
+  //
+  // padding: 0px 15px 0 15px;
 }
 
 
@@ -386,7 +387,12 @@ Text Analytics Rows
 	}
 	.negative {
 		color: #F47C6D;
+    padding-left: 30px;
 	}
+
+  .pos-title {
+    font-size: 10px;
+  }
 }
 
 

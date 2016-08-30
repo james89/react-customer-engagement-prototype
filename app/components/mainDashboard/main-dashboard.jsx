@@ -175,27 +175,65 @@ export default class MainDashboard extends React.Component {
 
        });
 
-    if (this.state.startDate && this.state.endDate){
+    // if (this.state.startDate && this.state.endDate){
       return (
         <div className="survey row">
+          <div className="nps-score">
+            <span>NPS SCORE</span>
+            <span className="nps-number"> VAL</span>
+          </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
             <div className="row row-eq-height table-header">
               <div className="col-md-1 row-header cust-exp">Customer Experience</div>
-              <div className="col-md-1 col-header seek">Seek (T-Mobile)</div>
-              <div className="col-md-1 col-header purchase">Purchase</div>
-              <div className="col-md-1 col-header first-imp">Develop First Impression</div>
-              <div className="col-md-1 col-header use">Use</div>
-              <div className="col-md-1 col-header get-help">Get Help</div>
-              <div className="col-md-1 col-header opti">Optimize</div>
-              <div className="col-md-1 col-header seek-ext">Seek (External)</div>
-              <div className="col-md-1 col-header leave">Leave</div>
+              <div className="col-md-1 col-header"><span className="sprite sprite-seek">Seek</span></div>
+              <div className="col-md-1 col-header purchase">
+                <span className="sprite sprite-purchase">Purchase</span>
+              </div>
+              <div className="col-md-1 col-header first-imp">
+                <span className="sprite sprite-first-imp">
+                Develop First Impression</span>
+                </div>
+              <div className="col-md-1 col-header use">
+                <span className="sprite sprite-use">
+                  Use
+                  </span>
+              </div>
+              <div className="col-md-1 col-header get-help">
+                <span className="sprite sprite-get-help">
+                Get Help
+                </span>
+              </div>
+              <div className="col-md-1 col-header opti">
+                <span className="sprite sprite-optimize">
+                Optimize
+                </span>
+              </div>
+              <div className="col-md-1 col-header seek-ext">
+                <span className="sprite sprite-seek-ext">
+                Seek (External)
+                </span>
+              </div>
+              <div className="col-md-1 col-header leave">
+
+                <span className="sprite sprite-leave">
+                Leave
+                </span>
+              </div>
             </div>
             {/* Interaction Points */}
             <div className="row row-eq-height interaction-pts">
-              <div className="col-md-1 row-header">Interaction Points</div>
+              <div className="col-md-1 row-header">
+              <span className="sprite sprite-int-points sprite-left-col">
+
+              Interaction<br/> Points</span> </div>
               <div className="col-md-1">
-                {/* swap out the html attributes with JS attributes in popover options object (refer to documentation) when JSON data is ready */}
+                {/* ONE POPOVER AT A TIME still needs implementation
+
+                  Refer to these links:
+                  https://github.com/react-bootstrap/react-bootstrap/issues/233
+                  https://github.com/react-bootstrap/react-bootstrap/issues/155
+                */}
                 <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
                   <Button>A</Button>
                 </OverlayTrigger>
@@ -263,24 +301,20 @@ export default class MainDashboard extends React.Component {
             </div>
             {/* Customer Satisfaction */}
             <div className="row row-eq-height fb-ratings">
-              <div className="col-md-1 row-header">Customer Satisfaction</div>
+              <div className="col-md-1 row-header">
+              <span className="sprite sprite-cust-satisf sprite-left-col">
+              Customer<br/> Satisfaction</span></div>
 
               {customerSatisfactionNodes}
 
-              {/* <div className="col-md-1 rating-orange">
 
-              </div>
-              <div className="col-md-1 rating-orange">8</div>
-              <div className="col-md-1 rating-green">9</div>
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" />
-              <div className="col-md-1" /> */}
             </div>
             {/* Ease of Doing Business */}
             <div className="row row-eq-height fb-ratings">
-              <div className="col-md-1 row-header">Ease of Doing Business</div>
+              <div className="col-md-1 row-header">
+              <span className="sprite sprite-ease-bus sprite-left-col">
+
+              Ease of Doing Business</span></div>
               {easeOfDoingBusinessNodes}
             </div>
 
@@ -292,7 +326,9 @@ export default class MainDashboard extends React.Component {
 
             {/* Text Analytics - Negative Themes */}
             <div className="row row-eq-height text-analytics">
-              <div className="col-md-1 row-header"><span>Text Analytics - <br/> <span className="negative">Negative Themes</span></span></div>
+              <div className="col-md-1 row-header">
+                <span className="negative">Negative Themes</span>
+              </div>
               <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
               <div className="col-md-4 negative">Competitors, Discounts and Offers, Affordability for Price</div>
               <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
@@ -306,7 +342,7 @@ export default class MainDashboard extends React.Component {
 
         </div>
       );
-    }
+    // }
   }
 
 	render() {
@@ -417,8 +453,8 @@ export default class MainDashboard extends React.Component {
 
               {/* First page load dont show table data. If user selects date range, show data as expected. */}
 
-              { this.state.initialDataShown ? this.shouldRenderTable() : null }
-
+              {/* { this.state.initialDataShown ? this.shouldRenderTable() : null } */}
+               { this.shouldRenderTable() }
 					</div>
 
 			</div>
