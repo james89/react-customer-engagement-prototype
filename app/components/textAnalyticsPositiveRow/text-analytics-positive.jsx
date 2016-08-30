@@ -15,7 +15,7 @@ class TextAnalyticsPositiveRow extends React.Component {
     let themes = this.props.positiveThemes || [];
 
       return (
-        <div className="row row-eq-height text-analytics">
+        <div className="row row-eq-height text-analytics white-bg">
           <div className="col-md-1 row-header">
             <span className="sprite sprite-text-ana sprite-left-col">Text Analytics <br/><br/>
               <span className="positive pos-title">Positive Themes</span>
@@ -25,13 +25,13 @@ class TextAnalyticsPositiveRow extends React.Component {
 
                   if (index === 1){
                     return (
-                      <div key={theme.phases} className="col-md-4 positive">
+                      <div key={theme.phases} className="col-md-4">
                         {theme.text}
                       </div>
                     );
                   } else {
                     return (
-                      <div key={theme.phases} className="col-md-2 positive">
+                      <div key={theme.phases} className="col-md-2">
                         {theme.text}
                       </div>
                     );

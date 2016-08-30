@@ -2,56 +2,58 @@
 /* Be sure that you replace data URIs with generated images */
 .sprite {
 	background-image: url('/icons/icon_sprite.png');
-  padding-left: 20px;
+  padding-left: 25px;
 
 }
 
 
 .sprite-leave {
-	width: 16px;
+	width: auto;
 	height: 12px;
 	background-position: 0 0;
 }
 
 .sprite-seek-ext {
-	width: 15px;
+	width: auto;
 	height: 15px;
 	background-position: -16px -12px;
 }
 
 .sprite-optimize {
-	width: 18px;
+	width: auto;
 	height: 13px;
 	background-position: -31px -27px;
 }
 
 .sprite-get-help {
-	width: 17px;
+	width: auto;
 	height: 14px;
 	background-position: -49px -40px;
 }
 
 .sprite-use {
-	width: 13px;
+	width: auto;
 	height: 18px;
 	background-position: -66px -54px;
 }
 
 .sprite-first-imp {
-	width: 9px;
+	width: auto;
 	height: 15px;
 	background-position: -79px -72px;
+  margin-left: 20px;
+  margin-right: 15px;
 }
 
 .sprite-purchase {
-	width: 16px;
+	width: auto;
 	height: 17px;
 	background-position: -88px -87px;
   margin-left: -10px;
 }
 
 .sprite-seek {
-	width: 13px;
+	width: auto;
 	height: 13px;
 	background-position: -104px -104px;
   margin-left: -10px;

@@ -6,30 +6,30 @@
 		"customerExperience":{
 
 			"customerSatisfaction":{
-				"seek":7,
-				"purchase":8,
-				"developFirstImpression":6,
-				"use":7,
-				"getHelp":8,
-				"optimize":8,
-				"seekExternal":6,
-				"leave":3
+				"seek":7.12,
+				"purchase":8.39,
+				"developFirstImpression":6.27,
+				"use":7.12,
+				"getHelp":8.55,
+				"optimize":8.11,
+				"seekExternal":6.10,
+				"leave":3.11
 			},
 			"easeOfDoingBusiness":{
-				"seek":7,
-				"purchase":8,
-				"developFirstImpression":2,
-				"use":7,
-				"getHelp":4,
-				"optimize":8,
-				"seekExternal":6,
-				"leave":4
+				"seek":7.43,
+				"purchase":8.33,
+				"developFirstImpression":2.21,
+				"use":7.34,
+				"getHelp":4.31,
+				"optimize":8.31,
+				"seekExternal":6.96,
+				"leave":4.23
 			},
 			"textAnalytics":{
 				"topPositiveThemes":[
 					{
 						"phases": "seek;purchase",
-						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+						"text":"Helpful and Accurate Information, Attitude and Professionalism"
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",

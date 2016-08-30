@@ -2,7 +2,7 @@
 
 
 body {
-  background: #f9f9f9;
+  background: #F6F5F5;
 	font-family: 'Open Sans', sans-serif;
 }
 .mui-appbar {
@@ -123,27 +123,24 @@ NPS SCORE
 
 */
 .nps-score {
+  display: table;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: #222;
+  color: #fff;
+  margin: 0 auto;
+  height: 50px;
+  width: 190px;
+  text-align: center;
   line-height: 50px;
-  display: inline-block;
-
-  span:first-of-type {
-    display: inline-block;
-    text-align: center;
-    width: 150px;
-    background: #222222;
-    font-weight: 400;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 1px;
-  }
 
   .nps-number {
-    display: inline-block;
-    text-align: center;
+    display: table-cell;
     width: 78px;
+    height: 50px;
     background: #fff;
     border: 1px solid #D5D5D5;
-    line-height: 50px;
   }
 }
 
@@ -227,11 +224,10 @@ h4 {
 .survey .row-eq-height [class*="col-"] {
   padding: 35px 20px 35px 0px;
 
-  border-left: 1px solid #EFEFEF !important;
-  border-bottom: 1px solid #EFEFEF !important;
+  // border-left: 1px solid #EFEFEF !important;
+  // border-bottom: 1px solid #EFEFEF !important;
   border-top: none;
-  box-shadow: 0 0 1px #222;
-  background: #F9F9F9;
+  box-shadow: 0 0 1px #EFEFEF;
 
 }
 
@@ -242,12 +238,12 @@ h4 {
 }
 
 .survey .row-eq-height > div:last-of-type {
-	border-right: 1px solid #ddd !important;
+	// border-right: 1px solid #ddd !important;
 }
 
 .row-header {
 	background-color: #222222 !important;
-	border-style: none !important;
+	// border-style: none !important;
 	color: #fff;
 	font-weight: normal;
   text-transform: uppercase;
@@ -307,17 +303,16 @@ Interaction points Row
 */
 
 .interaction-pts .btn {
-	background: #fff;
-	border: 3px solid #85BC40;
-	color: #85BC40;
+	background-color: transparent;
+	border: none;
+	color: #222;
 	margin: 5px;
 	font-weight: bold;
 	padding: 3px 6px;
 }
 
 .interaction-pts .btn:hover {
-	background: #85BC40;
-	color: #fff;
+	color: #85BC40;
 }
 
 .interaction-pts .col-md-1 {
@@ -335,10 +330,9 @@ Customer Satisfaction Row
 }
 .row .rating-green {
 	// background: #85BC40;
-	color: #658F2F;
+	color: #85BC40;
 	// border: 1px solid #658F2F !important;
 	font-size: 30px;
-	font-weight: bold;
 }
 
 .row .rating-orange {
@@ -346,9 +340,8 @@ Customer Satisfaction Row
 	// background: #FED86F;
 	// border: 1px solid #EE9825 !important;
 	font-size: 30px;
-	font-weight: bold;
 	text-align: center;
-	color: #EE9825;
+	color: #F4CF10;
 	align-items: center;
 	justify-content: center;
 
@@ -359,9 +352,8 @@ Customer Satisfaction Row
 	// background: #FD8D90;
 	// border: 1px solid #E7575C !important;
 	font-size: 30px;
-	font-weight: bold;
 	text-align: center;
-	color: #E7575C;
+	color: #D0021B;
 	align-items: center;
 	justify-content: center;
 }
@@ -387,11 +379,15 @@ Text Analytics Rows
 	}
 	.negative {
 		color: #F47C6D;
-    padding-left: 30px;
+    padding-left: 40px;
 	}
 
   .pos-title {
     font-size: 10px;
+  }
+
+  .col-md-2, .col-md-4 {
+    font-weight: normal;
   }
 }
 
@@ -450,4 +446,17 @@ ICONS
 
 .cust-exp {
   background: url('/icons/cust_exp.png') left no-repeat !important;
+  padding-left: 30px !important;
+}
+
+
+/*
+ Row Backgrounds
+*/
+.row.row-eq-height.interaction-pts {
+  background: #F7F7F7;
+}
+
+.white-bg {
+   background: #fff;
 }

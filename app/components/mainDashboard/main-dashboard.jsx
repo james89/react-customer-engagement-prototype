@@ -179,8 +179,8 @@ export default class MainDashboard extends React.Component {
       return (
         <div className="survey row">
           <div className="nps-score">
-            <span>NPS SCORE</span>
-            <span className="nps-number"> VAL</span>
+            NPS SCORE
+              <span className="nps-number">VAL</span>
           </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
@@ -191,8 +191,7 @@ export default class MainDashboard extends React.Component {
                 <span className="sprite sprite-purchase">Purchase</span>
               </div>
               <div className="col-md-1 col-header first-imp">
-                <span className="sprite sprite-first-imp">
-                Develop First Impression</span>
+                <span className="sprite sprite-first-imp">Develop First Impression</span>
                 </div>
               <div className="col-md-1 col-header use">
                 <span className="sprite sprite-use">
@@ -300,7 +299,7 @@ export default class MainDashboard extends React.Component {
               </div>
             </div>
             {/* Customer Satisfaction */}
-            <div className="row row-eq-height fb-ratings">
+            <div className="row row-eq-height fb-ratings white-bg">
               <div className="col-md-1 row-header">
               <span className="sprite sprite-cust-satisf sprite-left-col">
               Customer<br/> Satisfaction</span></div>
@@ -325,13 +324,13 @@ export default class MainDashboard extends React.Component {
 
 
             {/* Text Analytics - Negative Themes */}
-            <div className="row row-eq-height text-analytics">
+            <div className="row row-eq-height text-analytics white-bg">
               <div className="col-md-1 row-header">
                 <span className="negative">Negative Themes</span>
               </div>
-              <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
-              <div className="col-md-4 negative">Competitors, Discounts and Offers, Affordability for Price</div>
-              <div className="col-md-2 negative">Competitors, Discounts and Offers, Affordability for Price</div>
+              <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
+              <div className="col-md-4">Competitors, Discounts and Offers, Affordability for Price</div>
+              <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
             </div>{/* /Text Analytics Row */}
             {/* Feedback Confidence */}
             <FeedbackConfidenceRow />
@@ -413,10 +412,6 @@ export default class MainDashboard extends React.Component {
                               	<Button className="datepick-btn col-md-3" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button>
 									</div>
 
-                  <div className="nps-score col-md-2">
-                    <span>NPS SCORE</span>
-                    <span className="nps-number"> VAL</span>
-                  </div>
 								<div className="rating-key col-md-3">
 
 								<svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
