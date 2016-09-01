@@ -8,23 +8,27 @@ import axios from 'axios';
 import classNames from 'classnames';
 import { Line, Circle } from 'rc-progress';
 import CircularProgress from '../plugins/circle-progress.jsx';
+import moment from 'moment';
+import DatetimeRangePicker from 'react-bootstrap-datetimerangepicker';
+import { Popover, Overlay, OverlayTrigger, Button } from 'react-bootstrap';
+
 
 // const ResponsiveReactGridLayout = ReactGridLayout.Responsive;
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 
 const LayoutLarge = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 4, maxW: 4},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4, maxW: 4},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 4, maxW: 4}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.5, maxW: 4},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.5, maxW: 4},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.5, maxW: 4}
 ];
 
 
 
 const LayoutMedium = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 5},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 5},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 5}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 6},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 6},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 6}
 ];
 
 const LayoutSmall = [
@@ -124,7 +128,25 @@ class ChannelDashboard extends React.Component{
   }
 
   render(){
+    let { startDate, endDate } = this.state;
 
+     let label = '';
+     let start = startDate && startDate.format('MMM DD, YYYY') || '';
+     let end = endDate && endDate.format('MMM DD, YYYY') || '';
+     label = start + ' — ' + end;
+     if (start === end) {
+       label = start;
+     }
+
+     let locale = {
+       format: 'MMM DD, YYYY',
+       cancelLabel: 'Clear',
+     };
+
+     let pickerProps = {
+       startDate,
+       endDate,
+     };
     return (
             <div className="react-wrapper" id="channel">
 
@@ -142,6 +164,65 @@ class ChannelDashboard extends React.Component{
                   </table>
                 </div>
 
+                <div className="container">
+
+                    <div className="row datepick clearfix">
+                      <div className="datepicker col-md-4">
+
+                                    <DatetimeRangePicker
+                                      autoApply={true}
+                                      autoUpdateInput={false}
+                                      dateFormat={'MMM DD YYYY'}
+                                      locale={locale}
+                                      onApply={this.handleApply}
+                                      onCancel={this.handleCancel}
+                                      {...pickerProps}
+                                    >
+
+                                      <div className="input-group">
+                                      <div className="input-group-addon">From:</div>
+                                        <input type="text" className="form-control" value={label}/>
+
+                                      </div>
+                                    </DatetimeRangePicker>
+                                      {/* <Button className="datepick-btn col-md-3" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button> */}
+                        </div>
+
+                      <div className="rating-key col-md-3">
+
+                      <svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                              <rect id="path-1" x={0} y={0} width={325} height={50} />
+                              <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x={0} y={0} width={325} height={50} fill="white">
+                                <use xlinkHref="#path-1" />
+                              </mask>
+                            </defs>
+                            <g id="Performance-Rating-Key" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd" transform="translate(965.000000, 121.000000)">
+                              <use id="Rectangle-9-Copy" stroke="#D5D5D5" mask="url(#mask-2)" strokeWidth={2} fill="#FFFFFF" xlinkHref="#path-1" />
+                              <g id="Rating-Colors/text" transform="translate(10.000000, 24.000000)">
+                                <rect id="Rectangle-12" fill="#E7575C" x={0} y={2} width={15} height={15} />
+                                <text id="1---6" fontFamily="OpenSans-Bold, Open Sans" fontSize={13} fontWeight="bold" line-spacing={17} fill="#404040">
+                                  <tspan x={26} y={14}>1 - 6 </tspan>
+                                </text>
+                                <rect id="Rectangle-12-Copy" fill="#FED86F" x={85} y={2} width={15} height={15} />
+                                <text id="7---8" fontFamily="OpenSans-Bold, Open Sans" fontSize={13} fontWeight="bold" line-spacing={17} fill="#404040">
+                                  <tspan x={111} y={14}>7 - 8</tspan>
+                                </text>
+                                <rect id="Rectangle-12-Copy-2" fill="#85BC40" x={170} y={2} width={15} height={15} />
+                                <text id="9---10" fontFamily="OpenSans-Bold, Open Sans" fontSize={13} fontWeight="bold" line-spacing={17} fill="#404040">
+                                  <tspan x={196} y={14}>9 - 10</tspan>
+                                </text>
+                              </g>
+                              <text id="PERFORMANCE-RATING" fontFamily="OpenSans-Bold, Open Sans" fontSize={10} fontWeight="bold" line-spacing={13} fill="#404040">
+                                <tspan x={10} y={19}>PERFORMANCE RATING</tspan>
+                              </text>
+                            </g>
+                          </svg>
+
+                      </div>
+                    </div>
+                    </div>
+
                 <ResponsiveReactGridLayout layouts={Layouts} margin={[60,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480}} width={1200} isResizable={false}>
                   <div className="grid-item" key={'digital'}>
 
@@ -156,8 +237,8 @@ class ChannelDashboard extends React.Component{
                            "#d5d5d5",
                            "#F66D3B"]} ></VictoryPie> */}
                            <CircularProgress strokeColor={this.computeCircleColor(this.state.digitalPercentage)}
-                       strokeWidth="25"
-                       radius="70"
+                           strokeWidth="10"
+                           radius="85"
                        percentage={this.state.digitalPercentage}/>
 
                       </div>
@@ -194,12 +275,12 @@ class ChannelDashboard extends React.Component{
                             <td className={this.computeClassColor(this.state.digitalDataChart[4].customerEffor)}>{this.state.digitalDataChart[4].customerEffor}</td>
                         </tr>
                         <tr className="fb-theme-header">
-                          <th colSpan="3">Top Positive Themes</th>
-                          <tr><td colSpan="3" className="green-text">{this.state.digitalData.topPositiveThemes}</td></tr>
+                          <th colSpan="3" className="green-text">Top Positive Themes</th>
+                          <tr><td colSpan="3" className="">{this.state.digitalData.topPositiveThemes}</td></tr>
                         </tr>
                         <tr className="fb-theme-header">
-                          <th colSpan="3">Top Negative Themes</th>
-                          <tr><td colSpan="3" className="red-text">{this.state.digitalData.topNegativeThemes}</td></tr>
+                          <th colSpan="3" className="red-text">Top Negative Themes</th>
+                          <tr><td colSpan="3" className="">{this.state.digitalData.topNegativeThemes}</td></tr>
                         </tr>
                       </tbody>
                     </table>
@@ -210,8 +291,8 @@ class ChannelDashboard extends React.Component{
                           <div className="donut-chart">
                             <div ref="donutRating" className={"donut-rating " + this.computeClassColor(this.state.callCenterData.overall_score)}>{this.state.callCenterData.overall_score}</div>
                               <CircularProgress strokeColor={this.computeCircleColor(this.state.callCenterPercentage)}
-                              strokeWidth="25"
-                              radius="70"
+                              strokeWidth="10"
+                              radius="85"
                               percentage={this.state.callCenterPercentage}/>
                           </div>
                         <table className="table table-bordered">
@@ -247,12 +328,12 @@ class ChannelDashboard extends React.Component{
                                 <td className={this.computeClassColor(this.state.callCenterDataChart[4].customerEffor)}>{this.state.callCenterDataChart[4].customerEffor}</td>
                             </tr>
                             <tr className="fb-theme-header">
-                              <th colSpan="3">Top Positive Themes</th>
-                              <tr><td colSpan="3" className="green-text">{this.state.callCenterData.topPositiveThemes}</td></tr>
+                            <th colSpan="3" className="green-text">Top Positive Themes</th>
+                              <tr><td colSpan="3" className="">{this.state.callCenterData.topPositiveThemes}</td></tr>
                             </tr>
                             <tr className="fb-theme-header">
-                              <th colSpan="3">Top Negative Themes</th>
-                              <tr><td colSpan="3" className="red-text">{this.state.callCenterData.topNegativeThemes}</td></tr>
+                            <th colSpan="3" className="red-text">Top Negative Themes</th>
+                              <tr><td colSpan="3" className="">{this.state.callCenterData.topNegativeThemes}</td></tr>
                             </tr>
                           </tbody>
                         </table>
@@ -263,8 +344,8 @@ class ChannelDashboard extends React.Component{
                         <div className="donut-chart">
                           <div ref="donutRating" className={"donut-rating " + this.computeClassColor(this.state.inStoreData.overall_score)}>{this.state.inStoreData.overall_score}</div>
                             <CircularProgress strokeColor={this.computeCircleColor(this.state.inStorePercentage)}
-                            strokeWidth="25"
-                            radius="70"
+                            strokeWidth="10"
+                            radius="85"
                             percentage={this.state.inStorePercentage}/>
                         </div>
                       <table className="table table-bordered">
@@ -300,12 +381,12 @@ class ChannelDashboard extends React.Component{
                               <td className={this.computeClassColor(this.state.inStoreDataChart[4].customerEffor)}>{this.state.inStoreDataChart[4].customerEffor}</td>
                           </tr>
                           <tr className="fb-theme-header">
-                            <th colSpan="3">Top Positive Themes</th>
-                            <tr><td colSpan="3" className="green-text">{this.state.inStoreData.topPositiveThemes}</td></tr>
+                          <th colSpan="3" className="green-text">Top Positive Themes</th>
+                            <tr><td colSpan="3" className="">{this.state.inStoreData.topPositiveThemes}</td></tr>
                           </tr>
                           <tr className="fb-theme-header">
-                            <th colSpan="3">Top Negative Themes</th>
-                            <tr><td colSpan="3" className="red-text">{this.state.inStoreData.topNegativeThemes}</td></tr>
+                          <th colSpan="3" className="red-text">Top Negative Themes</th>
+                            <tr><td colSpan="3" className="">{this.state.inStoreData.topNegativeThemes}</td></tr>
                           </tr>
                         </tbody>
                       </table>

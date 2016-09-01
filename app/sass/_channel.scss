@@ -1,5 +1,6 @@
 .grid-item {
   background: #fff;
+  border: 1px solid #D5D5D5;
 }
 
 .donut-chart-title {
@@ -12,18 +13,9 @@
 .donut-chart {
   position: relative;
   width: auto;
-  margin: auto;
+  margin: 20px auto;
 
-  .donut-rating.rating-red {
-    color: #E7575C;
 
-  }
-  .donut-rating.rating-green {
-  	color: #658F2F;
-  }
-  .donut-rating.rating-orange {
-    color: #EE9825;
-  }
   svg g text {
     display: none;
   }
@@ -31,11 +23,12 @@
 
 .donut-rating {
   width: auto;
-  height: 50px;
+  height: 75px;
   overflow: visible;;
   text-align: center;
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: normal;
+  color: #222;
+  font-size: 48px;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -45,40 +38,44 @@
 
 #channel .react-grid-layout table, #channel .react-grid-layout th {
   text-align: center;
-  text-transform: uppercase;
-  font-size: 12px;
+  text-transform: uppercase !important;
+  font-size: 10px;
   vertical-align: middle;
 }
+
+#channel .react-grid-layout th {
+  background-color: #222 !important;
+  border: 1px solid #3E3E3E !important;
+}
+
 #channel .react-grid-layout table {
   border-top-color: #010202;
   border-bottom-style: none !important;
   margin-top: 15px;
 
+  .rating-green, .rating-orange, .rating-red {
+    border: 1px solid #EFEFEF;
+  }
+
   .rating-green {
-  	background: #85BC40;
-  	color: #658F2F;
-  	border: 1px solid #658F2F !important;
-  	font-size: 24px;
-  	font-weight: bold;
+  	color: #85BC40;
+  	font-size: 30px;
+  	font-weight: normal;
     text-align: center;
   }
 
   .rating-orange {
-  	background: #FED86F;
-  	border: 1px solid #EE9825 !important;
-  	font-size: 24px;
-  	font-weight: bold;
+    font-size: 30px;
+  	font-weight: normal;
   	text-align: center;
-  	color: #EE9825;
+  	color: #F4CF10;
   }
 
   .rating-red {
-  	background: #FD8D90;
-  	border: 1px solid #E7575C !important;
-  	font-size: 24px;
-  	font-weight: bold;
+    font-size: 30px;
+  	font-weight: normal;
   	text-align: center;
-  	color: #E7575C;
+  	color: #D0021B;
   }
 }
 
@@ -95,8 +92,9 @@
     text-transform: none !important;
     font-weight: normal;
     letter-spacing: 1px;
-    border-color: #010202 !important;
-    border-width: 1px !important;
+    // border-color: #010202 !important;
+    // // border-width: 1px !important;
+    // background-color: #222;
   }
 
 
@@ -109,21 +107,35 @@
   th {
     font-weight: normal;
     letter-spacing: 1px;
-    border-color: #010202 !important;
-    border-width: 1px !important;
+    // border-color: #010202 !important;
+    // border-width: 1px !important;
+    // background-color: #222;
+
   }
 
+
+
 }
 
+td[colspan="3"] {
+  font-size: 12px;
+  padding: 20px 0 20px 0;
+}
+
+
 .green-text {
-  color: #85BC40;
+  color: #71BB14;
 }
 .red-text {
-  color: #F47C6D;
+  color: #F87070;
   border-bottom: transparent !important;
 }
 tr td {
   text-transform: none !important;
+}
+
+.table-bordered > tbody > tr > td {
+  border: none;
 }
 
 

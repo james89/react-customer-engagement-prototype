@@ -14,6 +14,7 @@ export default class CircularProgress extends React.Component {
         const viewBox = `0 0 ${width} ${height}`;
         const dashArray = radius * Math.PI * 2;
         const dashOffset = dashArray - dashArray * this.props.percentage / 10;
+        const linecap = 'round';
 
         return (
             <svg
@@ -36,7 +37,8 @@ export default class CircularProgress extends React.Component {
                     style={{
                         strokeDasharray: dashArray,
                         strokeDashoffset: dashOffset,
-                        stroke: this.props.strokeColor
+                        stroke: this.props.strokeColor,
+                        strokeLinecap: linecap
                     }} />
 
             </svg>
