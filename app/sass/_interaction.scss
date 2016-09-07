@@ -1,0 +1,18 @@
+.interaction-toggle {
+  height: 24px;
+  background: #85BC40;
+}
+
+
+.interaction-pts {
+  display: none;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.interaction-pts.showRow {
+  opacity: 1;
+  height: 100px;
+}

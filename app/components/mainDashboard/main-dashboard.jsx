@@ -12,6 +12,9 @@ import { Link } from 'react-router';
 import Thermometer from '../thermometer/thermometer.jsx';
 import FeedbackConfidenceRow from '../feedbackConfidenceRow/feedback-confidence.jsx';
 import TextAnalyticsPositiveRow from '../textAnalyticsPositiveRow/text-analytics-positive.jsx';
+import InteractionPointsRow from '../interactionPoints/interaction-points.jsx';
+import InteractionToggle from '../interactionPoints/interaction-toggle.jsx';
+
 
 
 const popoverHoverFocus = (
@@ -54,7 +57,8 @@ export default class MainDashboard extends React.Component {
       easeRatings: undefined,
       firstOrSecondJSON: undefined,
       dashboardData: undefined,
-      positiveRowData: ''
+      positiveRowData: '',
+      intRowVisible: false
 		};
 
 	}
@@ -120,6 +124,12 @@ export default class MainDashboard extends React.Component {
 
 
 	}
+
+  toggleInteractionRow(){
+    this.setState({
+      intRowVisible: !this.state.intRowVisible
+    })
+  }
 
   shouldRenderTable(){
     let custSatisfactionData = this.state.data2 || '';
@@ -220,84 +230,11 @@ export default class MainDashboard extends React.Component {
                 </span>
               </div>
             </div>
-            {/* Interaction Points */}
-            <div className="row row-eq-height interaction-pts">
-              <div className="col-md-1 row-header">
-              <span className="sprite sprite-int-points sprite-left-col">
 
-              Interaction<br/> Points</span> </div>
-              <div className="col-md-1">
-                {/* ONE POPOVER AT A TIME still needs implementation
 
-                  Refer to these links:
-                  https://github.com/react-bootstrap/react-bootstrap/issues/233
-                  https://github.com/react-bootstrap/react-bootstrap/issues/155
-                */}
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>A</Button>
-                </OverlayTrigger>
+            <InteractionPointsRow intRowVisible={this.state.intRowVisible} />
+            <InteractionToggle onClick={this.toggleInteractionRow.bind(this)} />
 
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>B</Button>
-                </OverlayTrigger>
-                </div>
-              <div className="col-md-1">
-              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                <Button>C</Button>
-              </OverlayTrigger>
-              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                <Button>D</Button>
-              </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                <Button>E</Button>
-              </OverlayTrigger>
-              <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                <Button>F</Button>
-              </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>G</Button>
-                </OverlayTrigger>
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>H</Button>
-                </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>I</Button>
-                </OverlayTrigger>
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>J</Button>
-                </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>K</Button>
-                </OverlayTrigger>
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>L</Button>
-                </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>M</Button>
-                </OverlayTrigger>
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>N</Button>
-                </OverlayTrigger>
-              </div>
-              <div className="col-md-1">
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>O</Button>
-                </OverlayTrigger>
-                <OverlayTrigger trigger={['hover']} placement="bottom" overlay={popoverHoverFocus}>
-                  <Button>P</Button>
-                </OverlayTrigger>
-              </div>
-            </div>
             {/* Customer Satisfaction */}
             <div className="row row-eq-height fb-ratings white-bg">
               <div className="col-md-1 row-header">
