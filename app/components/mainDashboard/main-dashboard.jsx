@@ -189,68 +189,68 @@ export default class MainDashboard extends React.Component {
       return (
         <div className="survey row">
           <div className="nps-score">
-            NPS SCORE
+            NPS Score
               <span className="nps-number">VAL</span>
           </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
             <div className="row row-eq-height table-header">
-              <div className="col-md-1 row-header cust-exp">Customer Experience</div>
-              <div className="col-md-1 col-header"><span className="sprite sprite-seek">Seek</span></div>
+              <div className="col-md-1"><span className="cust-exp"></span><span className="cust-exp-title">Customer<br /> Experience</span></div>
+              <div className="col-md-1 col-header"><span className="sprite sprite-seek"></span>Seek</div>
               <div className="col-md-1 col-header purchase">
-                <span className="sprite sprite-purchase">Purchase</span>
+                <span className="sprite sprite-purchase"></span><span>Purchase</span>
               </div>
               <div className="col-md-1 col-header first-imp">
-                <span className="sprite sprite-first-imp">Develop First Impression</span>
+                <span className="sprite sprite-first-imp"></span>Develop First Impression
                 </div>
               <div className="col-md-1 col-header use">
                 <span className="sprite sprite-use">
-                  Use
-                  </span>
+
+                  </span>Use
               </div>
               <div className="col-md-1 col-header get-help">
                 <span className="sprite sprite-get-help">
-                Get Help
-                </span>
+
+                </span>Get Help
               </div>
               <div className="col-md-1 col-header opti">
                 <span className="sprite sprite-optimize">
-                Optimize
-                </span>
+
+                </span>Optimize
               </div>
               <div className="col-md-1 col-header seek-ext">
                 <span className="sprite sprite-seek-ext">
-                Seek (External)
-                </span>
+
+                </span>Seek (External)
               </div>
               <div className="col-md-1 col-header leave">
 
                 <span className="sprite sprite-leave">
-                Leave
-                </span>
+
+                </span>Leave
               </div>
             </div>
 
 
             <InteractionPointsRow intRowVisible={this.state.intRowVisible} />
-            <InteractionToggle onClick={this.toggleInteractionRow.bind(this)} />
+            <InteractionToggle intRowVisible={this.state.intRowVisible} onClick={this.toggleInteractionRow.bind(this)} />
 
             {/* Customer Satisfaction */}
             <div className="row row-eq-height fb-ratings white-bg">
               <div className="col-md-1 row-header">
-              <span className="sprite sprite-cust-satisf sprite-left-col">
-              Customer<br/> Satisfaction</span></div>
+              <span className="sprite sprite-cust-satisf">
+              </span><span className="row-title">Customer<br/> Satisfaction</span></div>
 
               {customerSatisfactionNodes}
 
 
             </div>
             {/* Ease of Doing Business */}
-            <div className="row row-eq-height fb-ratings">
+            <div className="row row-eq-height fb-ratings white-bg">
               <div className="col-md-1 row-header">
-              <span className="sprite sprite-ease-bus sprite-left-col">
+              <span className="sprite sprite-ease-bus">
 
-              Ease of Doing Business</span></div>
+              </span><span className="row-title">Ease of Doing <br/> Business</span></div>
               {easeOfDoingBusinessNodes}
             </div>
 

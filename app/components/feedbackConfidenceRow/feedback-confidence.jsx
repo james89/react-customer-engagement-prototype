@@ -11,8 +11,8 @@ class FeedbackConfidenceRow extends React.Component {
   render () {
 
     return (
-      <div className="row row-eq-height">
-        <div className="col-md-1 row-header"><span className="sprite sprite-feedback-conf sprite-left-col">Feedback Confidence</span></div>
+      <div className="row row-eq-height white-bg">
+        <div className="col-md-1 row-header"><span className="sprite sprite-feedback-conf"></span><span className="row-title">Feedback<br />Confidence</span></div>
         <div className="col-md-1">
           <svg width="39px" height="33px" viewBox="558 0 39 33" version="1.1" >
             <defs />

@@ -124,17 +124,28 @@ NPS SCORE
 */
 .nps-score {
   display: table;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 18px;
   letter-spacing: 1px;
-  background: #222;
+  background: #292A35;
   color: #fff;
   margin: 0 auto;
   height: 50px;
-  width: 190px;
+  width: 250px;
   text-align: center;
   line-height: 50px;
+  margin-bottom: 30px;
+  margin-top: -65px;
 
+  span:first-of-type {
+    background: url('/icons/nps_score.png') no-repeat;
+    background-position: left;
+    display: block;
+    text-align: right;
+    margin-right: 15px;
+  box-shadow: 2px 0px 28px -5px rgba(41,42,53,1);
+
+  }
   .nps-number {
     display: table-cell;
     width: 78px;
@@ -222,13 +233,15 @@ h4 {
 }
 
 .survey .row-eq-height [class*="col-"] {
-  padding: 35px 20px 35px 0px;
-
-  // border-left: 1px solid #EFEFEF !important;
-  // border-bottom: 1px solid #EFEFEF !important;
+  padding: 20px 0px 20px 0px;
   border-top: none;
-  box-shadow: 0 0 1px #EFEFEF;
+  // box-shadow: 0 0 1px #EFEFEF;
 
+}
+
+.survey .row.table-header [class*="col-"] {
+  border-right: 1px solid #464646 !important;
+  box-shadow: 0 0 1px #222222 !important;
 }
 
 .survey > .col-sm-12 {
@@ -242,22 +255,21 @@ h4 {
 }
 
 .row-header {
-	background-color: #222222 !important;
-	// border-style: none !important;
-	color: #fff;
-	font-weight: normal;
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: .1em;
-  font-weight: 600;
+	background-color: #F3F3F3 !important;
+	color: #222;
+  font-size: 13px;
+  // letter-spacing: .05em;
+  font-weight: bold;
+  text-align: center;
+  // justify-content: flex-start !important;
+}
 
-text-align: left;
-justify-content: flex-start !important;
+.row-title {
+  margin-top: 25px;
 }
 
 .col-header {
 	background-color: transparent !important;
-	text-transform: uppercase;
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
@@ -275,12 +287,23 @@ justify-content: flex-start !important;
 }
 
 .col-md-1.col-header {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: .1em;
+    // letter-spacing: .1em;
+
+    span:nth-of-type(2) {
+      margin-top: 20px;
+    }
 
 }
 
+.cust-exp-title {
+  font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-align: center;
+    margin-top: 20px;
+}
 
 .text-analytics {
   font-size: 12px;
@@ -332,14 +355,14 @@ Customer Satisfaction Row
 	// background: #85BC40;
 	color: #85BC40;
 	// border: 1px solid #658F2F !important;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .row .rating-orange {
 	display: inline-flex;
 	// background: #FED86F;
 	// border: 1px solid #EE9825 !important;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
 	color: #F4CF10;
 	align-items: center;
@@ -351,7 +374,7 @@ Customer Satisfaction Row
 	display: inline-flex;
 	// background: #FD8D90;
 	// border: 1px solid #E7575C !important;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
 	color: #D0021B;
 	align-items: center;
@@ -379,11 +402,11 @@ Text Analytics Rows
 	}
 	.negative {
 		color: #F47C6D;
-    padding-left: 40px;
+    
 	}
 
   .pos-title {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .col-md-2, .col-md-4 {
@@ -445,17 +468,29 @@ ICONS
 */
 
 .cust-exp {
-  background: url('/icons/cust_exp.png') left no-repeat !important;
-  padding-left: 30px !important;
+  background: url('/icons/cust_exp.png') top center no-repeat !important;
+  margin: auto;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 0;
+  left: 0;
+  margin-top: 10px;
 }
 
+.cust-exp-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-align: center;
+
+}
 
 /*
  Row Backgrounds
 */
-.row.row-eq-height.interaction-pts {
-  background: #F7F7F7;
-}
+
 
 .white-bg {
    background: #fff;

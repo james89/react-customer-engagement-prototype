@@ -14,6 +14,14 @@ export default class InteractionToggle extends React.Component {
     return (
       <div className="row interaction-toggle" onClick={this.props.onClick}>
 
+        {
+          this.props.intRowVisible ?
+
+          <div><span>Hide Interaction Points</span><span className="arrow-up"></span></div>
+          :
+          <div><span>View Interaction Points</span><span className="arrow-down"></span></div>
+        }
+
       </div>
     );
   }

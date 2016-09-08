@@ -17,9 +17,8 @@ class TextAnalyticsPositiveRow extends React.Component {
       return (
         <div className="row row-eq-height text-analytics white-bg">
           <div className="col-md-1 row-header">
-            <span className="sprite sprite-text-ana sprite-left-col">Text Analytics <br/><br/>
               <span className="positive pos-title">Positive Themes</span>
-            </span>
+      
           </div>
             {   themes.map(function(theme,index){
 

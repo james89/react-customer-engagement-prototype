@@ -2,95 +2,92 @@
 /* Be sure that you replace data URIs with generated images */
 .sprite {
 	background-image: url('/icons/icon_sprite.png');
-  padding-left: 25px;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	left: 0;
+	margin: 20px auto 0 auto;
+	width: 20px !important;
 
 }
 
 
 .sprite-leave {
-	width: auto;
 	height: 12px;
 	background-position: 0 0;
 }
 
 .sprite-seek-ext {
-	width: auto;
 	height: 15px;
 	background-position: -16px -12px;
 }
 
 .sprite-optimize {
-	width: auto;
 	height: 13px;
 	background-position: -31px -27px;
 }
 
 .sprite-get-help {
-	width: auto;
 	height: 14px;
 	background-position: -49px -40px;
 }
 
 .sprite-use {
-	width: auto;
 	height: 18px;
 	background-position: -66px -54px;
 }
 
 .sprite-first-imp {
-	width: auto;
 	height: 15px;
 	background-position: -79px -72px;
-  margin-left: 20px;
-  margin-right: 15px;
+
 }
 
 .sprite-purchase {
-	width: auto;
 	height: 17px;
 	background-position: -88px -87px;
-  margin-left: -10px;
+
 }
 
 .sprite-seek {
-	width: auto;
 	height: 13px;
 	background-position: -104px -104px;
-  margin-left: -10px;
+
 }
 
 .sprite-feedback-conf {
-	width: auto;
+	background: url('/icons/feedback_conf.png') no-repeat top left;
+  background-position: 0%;
 	height: 15px;
-	background-position: -117px -117px;
 }
 
 .sprite-text-ana {
-	width: auto;
 	height: 19px;
 	background-position: -132px -132px;
   margin-top: -30px;
 }
 
 .sprite-ease-bus {
-	background: url('/icons/icon_ease.png') no-repeat top left;
+	background: url('/icons/ease_bus.png') no-repeat top left;
   background-position: -3%;
+	height: 15px;
 }
 
 .sprite-cust-satisf {
-	width: auto;
-	height: 16px;
-	background-position: -174px -176px;
+	// width: auto;
+	// height: 16px;
+	// background-position: -174px -176px;
+	background: url('/icons/cust_satisf.png') no-repeat top left;
+  background-position: -3%;
+	height: 15px;
 }
 
 .sprite-int-points {
-	width: auto;
 	height: 9px;
 	background-position: -192px -192px;
 }
 
 .sprite-cust-exp {
-	width: 27px;
 	height: 22px;
 	background-position: -211px -201px;
 }
