@@ -12,6 +12,8 @@ import { Link } from 'react-router';
 import Thermometer from '../thermometer/thermometer.jsx';
 import FeedbackConfidenceRow from '../feedbackConfidenceRow/feedback-confidence.jsx';
 import TextAnalyticsPositiveRow from '../textAnalyticsPositiveRow/text-analytics-positive.jsx';
+import TextAnalyticsNegativeRow from '../textAnalyticsNegativeRow/text-analytics-negative.jsx';
+
 import InteractionPointsRow from '../interactionPoints/interaction-points.jsx';
 import InteractionToggle from '../interactionPoints/interaction-toggle.jsx';
 
@@ -261,14 +263,9 @@ export default class MainDashboard extends React.Component {
 
 
             {/* Text Analytics - Negative Themes */}
-            <div className="row row-eq-height text-analytics white-bg">
-              <div className="col-md-1 row-header">
-                <span className="negative">Negative Themes</span>
-              </div>
-              <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
-              <div className="col-md-4">Competitors, Discounts and Offers, Affordability for Price</div>
-              <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
-            </div>{/* /Text Analytics Row */}
+              <TextAnalyticsNegativeRow />
+            {/* /Text Analytics Row */}
+
             {/* Feedback Confidence */}
             <FeedbackConfidenceRow />
             {/* /Feedback Confidence Row */}

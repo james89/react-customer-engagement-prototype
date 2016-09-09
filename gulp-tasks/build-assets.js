@@ -3,6 +3,8 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
 var flatten = require('gulp-flatten');
+var replace = require('gulp-replace');
+
 
 function copy(glob, dest) {
 	if (!glob || !dest) {
@@ -30,6 +32,7 @@ module.exports = () => {
 
 	// sass
 	gulp.src('./app/**/*.scss')
+
 		.pipe(sass({
 			includePaths: [
 				'app/components',
@@ -38,5 +41,9 @@ module.exports = () => {
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
 		.pipe(flatten())
+		.pipe(replace("/icons/", "../../icons/"))
+
 		.pipe(gulp.dest('./dist/assets/css'));
+
+
 }
