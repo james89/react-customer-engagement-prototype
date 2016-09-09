@@ -26,16 +26,16 @@ $daterangepicker-cell-color:                 $daterangepicker-color !default;
 $daterangepicker-cell-border-color:          transparent !default;
 $daterangepicker-cell-bg-color:              $daterangepicker-bg-color !default;
 
-$daterangepicker-cell-hover-color:           $daterangepicker-color !default;
+$daterangepicker-cell-hover-color:           #fff !default;
 $daterangepicker-cell-hover-border-color:    $daterangepicker-cell-border-color !default;
-$daterangepicker-cell-hover-bg-color:        #eee !default;
+$daterangepicker-cell-hover-bg-color:        #85BC40 !default;
 
 $daterangepicker-in-range-color:             #000 !default;
 $daterangepicker-in-range-border-color:      transparent !default;
-$daterangepicker-in-range-bg-color:          #ebf4f8 !default;
+$daterangepicker-in-range-bg-color:          #EBEBEB !default;
 
 $daterangepicker-active-color:               #fff !default;
-$daterangepicker-active-bg-color:            #357ebd !default;
+$daterangepicker-active-bg-color:            #85BC40 !default;
 $daterangepicker-active-border-color:        transparent !default;
 
 $daterangepicker-unselected-color:           #999 !default;
@@ -44,8 +44,8 @@ $daterangepicker-unselected-bg-color:        #fff !default;
 
 //
 // daterangepicker
-$daterangepicker-width:          278px !default;
-$daterangepicker-padding:        4px !default;
+$daterangepicker-width:          350px !default;
+$daterangepicker-padding:        8px !default;
 $daterangepicker-z-index:        3000 !default;
 
 $daterangepicker-border-size:    1px !default;
@@ -86,7 +86,7 @@ $daterangepicker-control-border-color:         #ccc !default;
 $daterangepicker-control-border-radius:        4px !default;
 
 $daterangepicker-control-active-border-size:   1px !default;
-$daterangepicker-control-active-border-color:  #08c !default;
+$daterangepicker-control-active-border-color:  #A9C882 !default;
 $daterangepicker-control-active-border-radius: $daterangepicker-control-border-radius !default;
 
 $daterangepicker-control-disabled-color:       #ccc !default;

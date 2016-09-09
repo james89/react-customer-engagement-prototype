@@ -12,9 +12,90 @@ class TextAnalyticsNegativeRow extends React.Component {
         <div className="col-md-1 row-header">
           <span className="negative">Negative Themes</span>
         </div>
-        <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
-        <div className="col-md-4">Competitors, Discounts and Offers, Affordability for Price</div>
-        <div className="col-md-2">Competitors, Discounts and Offers, Affordability for Price</div>
+
+        <div className="col-md-2">
+          <table className="theme-table">
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+          </table>
+        </div>
+        <div className="col-md-2">
+          <table className="theme-table">
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+          </table>
+        </div>
+
+        <div className="col-md-1">
+          <table className="theme-table">
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+          </table>
+        </div>
+        <div className="col-md-1">
+          <table className="theme-table">
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+          </table>
+        </div>
+        <div className="col-md-2">
+          <table className="theme-table">
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+            <tr>
+              <td>This</td>
+              <td>Little</td>
+            </tr>
+          </table>
+        </div>
+
+
       </div>
     )
   }

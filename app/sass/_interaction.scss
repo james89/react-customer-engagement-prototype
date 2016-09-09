@@ -44,9 +44,33 @@
   transition: 0.4s ease-in-out;
   opacity: 0;
   background: #6C6C6C;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+
+  ul {
+    margin-left: -10px;
+  }
+
+  li {
+    margin: 3px 0;
+    list-style: none;
+  }
+
+  li:before {
+    content:'\2022';
+    display: block;
+      position: relative;
+      max-width: 0px;
+      max-height: 0px;
+      left: -15px;
+      top: -1px;
+      font-size: 14px;
+      color: #A4FF31;
+  }
 }
 
 .interaction-pts.showRow {
   opacity: 1;
-  height: 100px;
+  height: 155px;
 }

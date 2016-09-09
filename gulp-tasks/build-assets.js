@@ -4,6 +4,7 @@ var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
 var flatten = require('gulp-flatten');
 var replace = require('gulp-replace');
+var concat = require('gulp-concat');
 
 
 function copy(glob, dest) {
@@ -40,6 +41,7 @@ module.exports = () => {
 			],
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
+		.pipe(concat('main.css'))
 		.pipe(flatten())
 		.pipe(replace("/icons/", "../../icons/"))
 
