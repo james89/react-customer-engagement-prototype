@@ -42,6 +42,7 @@
     "browser-sync": "^2.11.1",
     "browserify-babel-istanbul": "^0.4.0",
     "del": "^2.2.0",
+    "gulp-concat": "^2.6.0",
     "gulp-flatten": "^0.2.0",
     "gulp-replace": "^0.5.4",
     "jasmine-core": "^2.4.1",
