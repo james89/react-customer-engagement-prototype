@@ -16,32 +16,32 @@ class TextAnalyticsNegativeRow extends React.Component {
         <div className="col-md-2">
           <table className="theme-table">
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
           </table>
         </div>
         <div className="col-md-2">
           <table className="theme-table">
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
           </table>
         </div>
@@ -49,48 +49,48 @@ class TextAnalyticsNegativeRow extends React.Component {
         <div className="col-md-1">
           <table className="theme-table">
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
           </table>
         </div>
         <div className="col-md-1">
           <table className="theme-table">
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
           </table>
         </div>
         <div className="col-md-2">
           <table className="theme-table">
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
             <tr>
-              <td>This</td>
-              <td>Little</td>
+              <td>Text</td>
+              <td>Score</td>
             </tr>
           </table>
         </div>
