@@ -3,17 +3,25 @@
   height: 100%;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-weight: normal;
 
-  td {
-    border: 1px solid #EFEFEF;
-    padding: 4px 7px;
-    font-weight: normal;
-    margin: 0;
-  }
 
-  tr {
+  div.text-ana-row {
+    display: flex;
     padding: 0;
     margin: 0;
+    flex: 1;
+  }
+
+  div.text-ana-theme {
+    flex: 2;
+  }
+
+  div.text-ana-score {
+    flex: 1;
   }
 }
 

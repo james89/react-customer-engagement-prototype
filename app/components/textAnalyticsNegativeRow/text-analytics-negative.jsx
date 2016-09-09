@@ -14,85 +14,85 @@ class TextAnalyticsNegativeRow extends React.Component {
         </div>
 
         <div className="col-md-2">
-          <table className="theme-table">
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-          </table>
+          <div className="theme-table">
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+              </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+          </div>
         </div>
         <div className="col-md-2">
-          <table className="theme-table">
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-          </table>
+          <div className="theme-table">
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+              </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+          </div>
         </div>
 
         <div className="col-md-1">
-          <table className="theme-table">
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-          </table>
+          <div className="theme-table">
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+              </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+          </div>
         </div>
         <div className="col-md-1">
-          <table className="theme-table">
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-          </table>
+          <div className="theme-table">
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+              </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+          </div>
         </div>
         <div className="col-md-2">
-          <table className="theme-table">
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-            <tr>
-              <td>Text</td>
-              <td>Score</td>
-            </tr>
-          </table>
+          <div className="theme-table">
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+              </div>
+            <div className="text-ana-row">
+              <div className="text-ana-theme">Text</div>
+              <div className="text-ana-score">Score</div>
+            </div>
+          </div>
         </div>
 
 
