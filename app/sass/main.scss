@@ -401,6 +401,8 @@ Text Analytics Rows
 .text-analytics {
 	font-weight: 600;
   border-bottom: 1px solid #EFEFEF;
+  box-shadow: 0 1px #FFF;
+
 	.positive {
 		color: #85BC40;
 	}
@@ -504,4 +506,14 @@ ICONS
 
 .survey > .col-sm-12 {
   border: 1px solid #EFEFEF;
+
+}
+
+.fb-ratings .row-header{
+  border-bottom: 1px solid #EFEFEF !important;
+  box-shadow: none;
+}
+
+.fb-conf .row-header {
+  border-top: 1px solid #EFEFEF !important;
 }

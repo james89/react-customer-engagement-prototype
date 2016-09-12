@@ -38,8 +38,9 @@
 
 #channel .react-grid-layout table, #channel .react-grid-layout th {
   text-align: center;
-  text-transform: uppercase !important;
-  font-size: 10px;
+  text-transform: none;
+  font-size: 13px;
+  font-weight: normal;
   vertical-align: middle;
 }
 
@@ -48,10 +49,13 @@
   border: 1px solid #3E3E3E !important;
 }
 
-#channel .react-grid-layout table {
+#channel .react-grid-layout .react-grid-item > table {
   border-top-color: #010202;
   border-bottom-style: none !important;
   margin-top: 15px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
 
   .rating-green, .rating-orange, .rating-red {
     border: 1px solid #EFEFEF;
@@ -59,20 +63,20 @@
 
   .rating-green {
   	color: #85BC40;
-  	font-size: 30px;
+  	font-size: 22px;
   	font-weight: normal;
     text-align: center;
   }
 
   .rating-orange {
-    font-size: 30px;
+    font-size: 22px;
   	font-weight: normal;
   	text-align: center;
   	color: #F4CF10;
   }
 
   .rating-red {
-    font-size: 30px;
+    font-size: 22px;
   	font-weight: normal;
   	text-align: center;
   	color: #D0021B;
@@ -102,8 +106,9 @@
 }
 
 .fb-theme-header {
-  background: #404040;
-  color: #fff;
+  // background: #404040;
+  // color: #fff;
+      // border: 1px solid #EFEFEF;
   th {
     font-weight: normal;
     letter-spacing: 1px;
@@ -135,7 +140,7 @@ tr td {
 }
 
 .table-bordered > tbody > tr > td {
-  border: none;
+border: 1px solid #efefef;
 }
 
 
@@ -173,4 +178,23 @@ tr td {
     transform: rotate(-90deg);
     display: block;
     margin: 0 auto;
+}
+
+.fb-theme-header {
+  td {
+    padding: 0 !important;
+  }
+  table {
+  width: 100%;
+
+    tbody {
+
+    }
+
+    tr {
+      td {
+        padding: 5px !important;
+      }
+    }
+  }
 }

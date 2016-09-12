@@ -12,16 +12,24 @@
   div.text-ana-row {
     display: flex;
     padding: 0;
-    margin: 0;
     flex: 1;
   }
 
   div.text-ana-theme {
     flex: 2;
+    padding: 5px 10px;
+    border: 1px solid #EFEFEF;
+    border-top: none;
+    box-shadow: 0 1px #FFF;
   }
 
   div.text-ana-score {
     flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #EFEFEF;
+    border-top: none;
+    box-shadow: 0 1px #FFF;
+
   }
 }
 

@@ -26,9 +26,9 @@ const LayoutLarge = [
 
 
 const LayoutMedium = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 6},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 6},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 6}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.5},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.5},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.5}
 ];
 
 const LayoutSmall = [
@@ -37,9 +37,9 @@ const LayoutSmall = [
   {i: 'inStore', x: 2, y: 0, w: 8, h: 4}
 ];
 const LayoutXS = [
-  {i: 'digital', x: 1, y: 0, w: 6,  h: 5},
-  {i: 'callCenter', x: 1, y: 0, w: 6, h: 5},
-  {i: 'inStore', x: 1, y: 0, w: 6, h: 5}
+  {i: 'digital', x: 1, y: 0, w: 6,  h: 4.5},
+  {i: 'callCenter', x: 1, y: 0, w: 6, h: 4.5},
+  {i: 'inStore', x: 1, y: 0, w: 6, h: 4.5}
 ]
 const Layouts = {
   lg: LayoutLarge,
@@ -275,12 +275,38 @@ class ChannelDashboard extends React.Component{
                             <td className={this.computeClassColor(this.state.digitalDataChart[4].customerEffor)}>{this.state.digitalDataChart[4].customerEffor}</td>
                         </tr>
                         <tr className="fb-theme-header">
-                          <th colSpan="3" className="green-text">Top Positive Themes</th>
-                          <tr><td colSpan="3" className="">{this.state.digitalData.topPositiveThemes}</td></tr>
+                          <th colSpan="1" className="green-text">Positive Themes</th>
+                          <td className="">
+                          <table className="fb-theme-text"><tbody>
+                            <tr><td>Text</td></tr>
+                            <tr><td>Text</td></tr>
+                            <tr><td>Text</td></tr></tbody>
+                          </table>
+                          </td>
+                          <td className="">
+                          <table className="fb-theme-score"><tbody>
+                            <tr><td>Score</td></tr>
+                            <tr><td>Score</td></tr>
+                            <tr><td>Score</td></tr></tbody>
+                          </table>
+                          </td>
                         </tr>
                         <tr className="fb-theme-header">
-                          <th colSpan="3" className="red-text">Top Negative Themes</th>
-                          <tr><td colSpan="3" className="">{this.state.digitalData.topNegativeThemes}</td></tr>
+                          <th colSpan="" className="red-text">Negative Themes</th>
+                          <td className="">
+                          <table className="fb-theme-text"><tbody>
+                            <tr><td>Text</td></tr>
+                            <tr><td>Text</td></tr>
+                            <tr><td>Text</td></tr></tbody>
+                          </table>
+                          </td>
+                          <td className="">
+                          <table className="fb-theme-score"><tbody>
+                            <tr><td>Score</td></tr>
+                            <tr><td>Score</td></tr>
+                            <tr><td>Score</td></tr></tbody>
+                          </table>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -328,12 +354,38 @@ class ChannelDashboard extends React.Component{
                                 <td className={this.computeClassColor(this.state.callCenterDataChart[4].customerEffor)}>{this.state.callCenterDataChart[4].customerEffor}</td>
                             </tr>
                             <tr className="fb-theme-header">
-                            <th colSpan="3" className="green-text">Top Positive Themes</th>
-                              <tr><td colSpan="3" className="">{this.state.callCenterData.topPositiveThemes}</td></tr>
+                              <th colSpan="1" className="green-text">Positive Themes</th>
+                              <td className="">
+                              <table className="fb-theme-text"><tbody>
+                                <tr><td>Text</td></tr>
+                                <tr><td>Text</td></tr>
+                                <tr><td>Text</td></tr></tbody>
+                              </table>
+                              </td>
+                              <td className="">
+                              <table className="fb-theme-score"><tbody>
+                                <tr><td>Score</td></tr>
+                                <tr><td>Score</td></tr>
+                                <tr><td>Score</td></tr></tbody>
+                              </table>
+                              </td>
                             </tr>
                             <tr className="fb-theme-header">
-                            <th colSpan="3" className="red-text">Top Negative Themes</th>
-                              <tr><td colSpan="3" className="">{this.state.callCenterData.topNegativeThemes}</td></tr>
+                              <th colSpan="" className="red-text">Negative Themes</th>
+                              <td className="">
+                              <table className="fb-theme-text"><tbody>
+                                <tr><td>Text</td></tr>
+                                <tr><td>Text</td></tr>
+                                <tr><td>Text</td></tr></tbody>
+                              </table>
+                              </td>
+                              <td className="">
+                              <table className="fb-theme-score"><tbody>
+                                <tr><td>Score</td></tr>
+                                <tr><td>Score</td></tr>
+                                <tr><td>Score</td></tr></tbody>
+                              </table>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -381,12 +433,38 @@ class ChannelDashboard extends React.Component{
                               <td className={this.computeClassColor(this.state.inStoreDataChart[4].customerEffor)}>{this.state.inStoreDataChart[4].customerEffor}</td>
                           </tr>
                           <tr className="fb-theme-header">
-                          <th colSpan="3" className="green-text">Top Positive Themes</th>
-                            <tr><td colSpan="3" className="">{this.state.inStoreData.topPositiveThemes}</td></tr>
+                            <th colSpan="1" className="green-text">Positive Themes</th>
+                            <td className="">
+                            <table className="fb-theme-text"><tbody>
+                              <tr><td>Text</td></tr>
+                              <tr><td>Text</td></tr>
+                              <tr><td>Text</td></tr></tbody>
+                            </table>
+                            </td>
+                            <td className="">
+                            <table className="fb-theme-score"><tbody>
+                              <tr><td>Score</td></tr>
+                              <tr><td>Score</td></tr>
+                              <tr><td>Score</td></tr></tbody>
+                            </table>
+                            </td>
                           </tr>
                           <tr className="fb-theme-header">
-                          <th colSpan="3" className="red-text">Top Negative Themes</th>
-                            <tr><td colSpan="3" className="">{this.state.inStoreData.topNegativeThemes}</td></tr>
+                            <th colSpan="" className="red-text">Negative Themes</th>
+                            <td className="">
+                            <table className="fb-theme-text"><tbody>
+                              <tr><td>Text</td></tr>
+                              <tr><td>Text</td></tr>
+                              <tr><td>Text</td></tr></tbody>
+                            </table>
+                            </td>
+                            <td className="">
+                            <table className="fb-theme-score"><tbody>
+                              <tr><td>Score</td></tr>
+                              <tr><td>Score</td></tr>
+                              <tr><td>Score</td></tr></tbody>
+                            </table>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
