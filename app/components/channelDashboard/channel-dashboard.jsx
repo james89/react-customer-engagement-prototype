@@ -18,17 +18,17 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 
 const LayoutLarge = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.5, maxW: 4},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.5, maxW: 4},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.5, maxW: 4}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 4, maxW: 4},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4, maxW: 4},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 4, maxW: 4}
 ];
 
 
 
 const LayoutMedium = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.5},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.5},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.5}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.3},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.3},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.3}
 ];
 
 const LayoutSmall = [
@@ -37,9 +37,9 @@ const LayoutSmall = [
   {i: 'inStore', x: 2, y: 0, w: 8, h: 4}
 ];
 const LayoutXS = [
-  {i: 'digital', x: 1, y: 0, w: 6,  h: 4.5},
-  {i: 'callCenter', x: 1, y: 0, w: 6, h: 4.5},
-  {i: 'inStore', x: 1, y: 0, w: 6, h: 4.5}
+  {i: 'digital', x: 1, y: 0, w: 6,  h: 4.3},
+  {i: 'callCenter', x: 1, y: 0, w: 6, h: 4.3},
+  {i: 'inStore', x: 1, y: 0, w: 6, h: 4.3}
 ]
 const Layouts = {
   lg: LayoutLarge,
@@ -107,6 +107,19 @@ class ChannelDashboard extends React.Component{
   componentWillUnmount() {
   window.clearInterval(this.setStateInterval);
 }
+handleApply(event, picker) {
+  this.setState({
+    startDate: picker.startDate,
+    endDate: picker.endDate,
+  });
+}
+
+handleCancel() {
+  this.setState({
+    startDate: undefined,
+    endDate: undefined,
+  });
+}
 
   // http://www.codeblocq.com/2015/12/Easy-dynamic-classes-with-React/
   computeClassColor(val){
@@ -164,7 +177,7 @@ class ChannelDashboard extends React.Component{
                   </table>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
 
                     <div className="row datepick clearfix">
                       <div className="datepicker col-md-4">
@@ -174,8 +187,8 @@ class ChannelDashboard extends React.Component{
                                       autoUpdateInput={false}
                                       dateFormat={'MMM DD YYYY'}
                                       locale={locale}
-                                      onApply={this.handleApply}
-                                      onCancel={this.handleCancel}
+                                      onApply={this.handleApply.bind(this)}
+                                      onCancel={this.handleCancel.bind(this)}
                                       {...pickerProps}
                                     >
 
@@ -185,10 +198,10 @@ class ChannelDashboard extends React.Component{
 
                                       </div>
                                     </DatetimeRangePicker>
-                                      {/* <Button className="datepick-btn col-md-3" onClick={this.getJSON.bind(this)} disabled={!this.state.startDate || !this.state.endDate} >Go</Button> */}
+                                      <Button className="datepick-btn col-md-3" onClick="" disabled={!this.state.startDate || !this.state.endDate} >Go</Button>
                         </div>
 
-                      <div className="rating-key col-md-3">
+                      <div className="rating-key col-md-3 col-xs-12">
 
                       <svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                             <defs>
@@ -222,8 +235,13 @@ class ChannelDashboard extends React.Component{
                       </div>
                     </div>
                     </div>
-
-                <ResponsiveReactGridLayout layouts={Layouts} margin={[60,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480}} width={1200} isResizable={false}>
+                    <div className="row nps-row">
+                    <div className="nps-score">
+                      NPS Score
+                        <span className="nps-number">VAL</span>
+                    </div>
+                    </div>
+                <ResponsiveReactGridLayout layouts={Layouts} margin={[40,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480}} width={1200} isResizable={false}>
                   <div className="grid-item" key={'digital'}>
 
                       <div className="donut-chart-title">Digital</div>

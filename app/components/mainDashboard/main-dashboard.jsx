@@ -328,8 +328,8 @@ export default class MainDashboard extends React.Component {
 										            autoUpdateInput={false}
                                 dateFormat={'MMM DD YYYY'}
 										            locale={locale}
-										            onApply={this.handleApply}
-										            onCancel={this.handleCancel}
+										            onApply={this.handleApply.bind(this)}
+										            onCancel={this.handleCancel.bind(this)}
 										            {...pickerProps}
 										          >
 
