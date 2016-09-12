@@ -348,6 +348,9 @@ Customer Satisfaction Row
 
 */
 
+.fb-ratings {
+  border-bottom: 1px solid #EFEFEF;
+}
 .fb-ratings .col-md-1 {
   // max-height: 70px;
 }
@@ -397,12 +400,13 @@ Text Analytics Rows
 
 .text-analytics {
 	font-weight: 600;
+  border-bottom: 1px solid #EFEFEF;
 	.positive {
 		color: #85BC40;
 	}
 	.negative {
 		color: #F47C6D;
-    
+
 	}
 
   .pos-title {
@@ -494,4 +498,10 @@ ICONS
 
 .white-bg {
    background: #fff;
+}
+
+
+
+.survey > .col-sm-12 {
+  border: 1px solid #EFEFEF;
 }
