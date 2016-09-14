@@ -26,8 +26,10 @@
   div.text-ana-score {
     flex: 1;
     padding: 5px 10px;
+
     border: 1px solid #EFEFEF;
-    border-top: none;
+    border-width: 0 0 1px 0;
+
     box-shadow: 0 1px #FFF;
 
   }

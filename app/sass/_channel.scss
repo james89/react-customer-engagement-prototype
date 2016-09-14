@@ -23,23 +23,25 @@
 
 .donut-rating {
   width: auto;
-  height: 75px;
+  height: 58px;
   overflow: visible;;
   text-align: center;
   font-weight: normal;
   color: #222;
-  font-size: 48px;
+  font-size: 36px;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 
 
 }
-
+.react-grid-layout {
+  margin-top: -20px;
+}
 #channel .react-grid-layout table, #channel .react-grid-layout th {
   text-align: center;
   text-transform: none;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: normal;
   vertical-align: middle;
 }
@@ -47,6 +49,7 @@
 #channel .react-grid-layout th {
   background-color: #222 !important;
   border: 1px solid #3E3E3E !important;
+  padding: 5px;
 }
 
 #channel .react-grid-layout .react-grid-item > table {
@@ -59,6 +62,8 @@
 
   .rating-green, .rating-orange, .rating-red {
     border: 1px solid #EFEFEF;
+    padding: 2px;
+    font-size: 19px !important;
   }
 
   .rating-green {
@@ -192,6 +197,7 @@ border: 1px solid #efefef;
     }
 
     tr {
+      font-size: 11px;
       td {
         padding: 5px 5px 4px 5px !important;
         border-bottom: 1px solid #efefef;

@@ -52,8 +52,8 @@ export default class MainDashboard extends React.Component {
 		};
 		this.state = {
 			show: false,
-			startDate: undefined,
-      endDate: undefined,
+      startDate: moment().subtract(7, 'days'),
+      endDate: moment(),
       data: {},
       data2: '',
       easeRatings: undefined,

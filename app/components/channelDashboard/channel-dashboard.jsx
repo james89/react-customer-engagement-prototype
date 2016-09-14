@@ -18,23 +18,23 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 
 const LayoutLarge = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 4, maxW: 4},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4, maxW: 4},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 4, maxW: 4}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 3.3, maxW: 4},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 3.3, maxW: 4},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 3.3, maxW: 4}
 ];
 
 
 
 const LayoutMedium = [
-  {i: 'digital', x: 0, y: 0, w: 4,  h: 4.3},
-  {i: 'callCenter', x: 4, y: 0, w: 4, h: 4.3},
-  {i: 'inStore', x: 8, y: 0, w: 4, h: 4.3}
+  {i: 'digital', x: 0, y: 0, w: 4,  h: 3.4},
+  {i: 'callCenter', x: 4, y: 0, w: 4, h: 3.4},
+  {i: 'inStore', x: 8, y: 0, w: 4, h: 3.4}
 ];
 
 const LayoutSmall = [
-  {i: 'digital', x: 2, y: 0, w: 8,  h: 4},
-  {i: 'callCenter', x: 2, y: 0, w: 8, h: 4},
-  {i: 'inStore', x: 2, y: 0, w: 8, h: 4}
+  {i: 'digital', x: 2, y: 0, w: 8,  h: 3.2},
+  {i: 'callCenter', x: 2, y: 0, w: 8, h: 3.2},
+  {i: 'inStore', x: 2, y: 0, w: 8, h: 3.2}
 ];
 const LayoutXS = [
   {i: 'digital', x: 1, y: 0, w: 6,  h: 4.3},
@@ -53,7 +53,11 @@ class ChannelDashboard extends React.Component{
   constructor(){
     super()
 
+
+
     this.state = {
+      startDate: moment().subtract(7, 'days'),
+      endDate: moment(),
       percentage: 0,
       circleColor: null,
       data: this.getData(),
@@ -256,7 +260,7 @@ handleCancel() {
                            "#F66D3B"]} ></VictoryPie> */}
                            <CircularProgress strokeColor={this.computeCircleColor(this.state.digitalPercentage)}
                            strokeWidth="10"
-                           radius="85"
+                           radius="60"
                        percentage={this.state.digitalPercentage}/>
 
                       </div>
@@ -336,7 +340,7 @@ handleCancel() {
                             <div ref="donutRating" className={"donut-rating " + this.computeClassColor(this.state.callCenterData.overall_score)}>{this.state.callCenterData.overall_score}</div>
                               <CircularProgress strokeColor={this.computeCircleColor(this.state.callCenterPercentage)}
                               strokeWidth="10"
-                              radius="85"
+                              radius="60"
                               percentage={this.state.callCenterPercentage}/>
                           </div>
                         <table className="table table-bordered">
@@ -415,7 +419,7 @@ handleCancel() {
                           <div ref="donutRating" className={"donut-rating " + this.computeClassColor(this.state.inStoreData.overall_score)}>{this.state.inStoreData.overall_score}</div>
                             <CircularProgress strokeColor={this.computeCircleColor(this.state.inStorePercentage)}
                             strokeWidth="10"
-                            radius="85"
+                            radius="60"
                             percentage={this.state.inStorePercentage}/>
                         </div>
                       <table className="table table-bordered">

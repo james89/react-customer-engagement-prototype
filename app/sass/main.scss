@@ -36,7 +36,7 @@ body {
 	vertical-align: bottom;
   float: right;
   margin-top: 10px;
-  margin-right: 60px;
+  margin-right: 35px;
 	.mui-btn {
 		margin: 0;
     font-size: 13px;
@@ -140,7 +140,7 @@ NPS SCORE
 .nps-score {
   display: table;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   background: #292A35;
   color: #fff;
@@ -271,12 +271,23 @@ h4 {
 
 .row-header {
 	background-color: #F3F3F3 !important;
+  border-left: 1px solid #D5D5D5;
 	color: #222;
-  font-size: 13px;
+  font-size: 11px;
   // letter-spacing: .05em;
   font-weight: bold;
   text-align: center;
   // justify-content: flex-start !important;
+}
+
+.fb-conf {
+  border-bottom: 1px solid #D5D5D5;
+  border-right: 1px solid #D5D5D5;
+
+}
+
+.fb-ratings, .text-analytics {
+  border-right: 1px solid #D5D5D5;
 }
 
 .row-title {
@@ -302,7 +313,7 @@ h4 {
 }
 
 .col-md-1.col-header {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     // letter-spacing: .1em;
 
@@ -313,7 +324,7 @@ h4 {
 }
 
 .cust-exp-title {
-  font-size: 12px;
+  font-size: 11px;
     font-weight: 600;
     letter-spacing: .1em;
     text-align: center;
@@ -512,7 +523,7 @@ ICONS
 }
 
 .cust-exp-title {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: .1em;
   text-align: center;
