@@ -12,7 +12,7 @@ body {
 
 }
 .mui--appbar-height {
-	height: 80px;
+	height: 60px;
 }
 .mui--appbar-height.header {
 	font-size: 28px;
@@ -35,7 +35,7 @@ body {
 .nav-items {
 	vertical-align: bottom;
   float: right;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 60px;
 	.mui-btn {
 		margin: 0;
@@ -54,10 +54,12 @@ Datepicker + Dropdown
 */
 .rating-key {
 	float: right;
+  padding-right: 0;
 }
 .datepicker {
   max-width: 400px;
   display: inline-block;
+  padding-left: 0;
 
   > div {
     display: inline-block;
@@ -147,8 +149,8 @@ NPS SCORE
   width: 250px;
   text-align: center;
   line-height: 50px;
-  margin-bottom: 30px;
-  margin-top: -65px;
+  margin-bottom: 20px;
+  margin-top: -56px;
 
   span:first-of-type {
     background: url('/icons/nps_score.png') no-repeat;
@@ -235,7 +237,7 @@ h4 {
 }
 
 .survey {
-	margin: 10px;
+	margin: 0 35px;
 }
 .survey .row {
   margin-bottom: 0px;
@@ -246,7 +248,7 @@ h4 {
 }
 
 .survey .row-eq-height [class*="col-"] {
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
   border-top: none;
   // box-shadow: 0 0 1px #EFEFEF;
 
