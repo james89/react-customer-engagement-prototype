@@ -16,32 +16,32 @@ class TextAnalyticsNegativeRow extends React.Component {
         <div className="col-md-2">
           <div className="theme-table">
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Competitors</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Discounts and Offers</div>
+              <div className="text-ana-score">-1.13</div>
               </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Affordability</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
           </div>
         </div>
         <div className="col-md-2">
           <div className="theme-table">
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Competitors</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Discounts and Offers</div>
+              <div className="text-ana-score">-1.13</div>
               </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Affordability</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
           </div>
         </div>
@@ -81,16 +81,16 @@ class TextAnalyticsNegativeRow extends React.Component {
         <div className="col-md-2">
           <div className="theme-table">
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Competitors</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Discounts and Offers</div>
+              <div className="text-ana-score">-1.13</div>
               </div>
             <div className="text-ana-row">
-              <div className="text-ana-theme">Text</div>
-              <div className="text-ana-score">Score</div>
+              <div className="text-ana-theme">Affordability</div>
+              <div className="text-ana-score">-1.23</div>
             </div>
           </div>
         </div>

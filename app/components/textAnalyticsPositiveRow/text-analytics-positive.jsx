@@ -40,32 +40,32 @@ class TextAnalyticsPositiveRow extends React.Component {
               <div className="col-md-2">
                 <div className="theme-table">
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Attitude</div>
+                    <div className="text-ana-score">3.69</div>
                   </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Helpfulness</div>
+                    <div className="text-ana-score">2.59</div>
                     </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Friendliness</div>
+                    <div className="text-ana-score">1.66</div>
                   </div>
                 </div>
               </div>
               <div className="col-md-2">
                 <div className="theme-table">
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Attitude</div>
+                    <div className="text-ana-score">3.69</div>
                   </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Helpfulness</div>
+                    <div className="text-ana-score">2.59</div>
                     </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Friendliness</div>
+                    <div className="text-ana-score">1.66</div>
                   </div>
                 </div>
               </div>
@@ -105,16 +105,16 @@ class TextAnalyticsPositiveRow extends React.Component {
               <div className="col-md-2">
                 <div className="theme-table">
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Attitude</div>
+                    <div className="text-ana-score">3.69</div>
                   </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Helpfulness</div>
+                    <div className="text-ana-score">2.59</div>
                     </div>
                   <div className="text-ana-row">
-                    <div className="text-ana-theme">Text</div>
-                    <div className="text-ana-score">Score</div>
+                    <div className="text-ana-theme">Staff - Friendliness</div>
+                    <div className="text-ana-score">1.66</div>
                   </div>
                 </div>
               </div>

@@ -41,8 +41,8 @@
 #channel .react-grid-layout table, #channel .react-grid-layout th {
   text-align: center;
   text-transform: none;
-  font-size: 12px;
-  font-weight: normal;
+  font-size: 10px;
+  font-weight: 500;
   vertical-align: middle;
 }
 
@@ -62,8 +62,9 @@
 
   .rating-green, .rating-orange, .rating-red {
     border: 1px solid #EFEFEF;
-    padding: 2px;
-    font-size: 19px !important;
+    padding: 3px;
+    font-size: 17px !important;
+    font-weight: 300 !important;
   }
 
   .rating-green {

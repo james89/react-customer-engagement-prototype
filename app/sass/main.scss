@@ -15,11 +15,12 @@ body {
 	height: 60px;
 }
 .mui--appbar-height.header {
-	font-size: 28px;
-	font-weight: normal;
+	font-size: 27px;
+	font-weight: 300;
 	padding-left: 50px;
 	letter-spacing: 1px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
 
 }
 .mui-appbar .mui-btn {
@@ -39,10 +40,11 @@ body {
   margin-right: 35px;
 	.mui-btn {
 		margin: 0;
-    font-size: 13px;
+    font-size: 11px;
 height: 40px;
 border-radius: 0px;
 line-height: 40px;
+font-weight: 500;
 	}
 }
 

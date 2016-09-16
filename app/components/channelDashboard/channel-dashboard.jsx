@@ -245,7 +245,7 @@ handleCancel() {
                         <span className="nps-number">VAL</span>
                     </div>
                     </div>
-                <ResponsiveReactGridLayout layouts={Layouts} margin={[40,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480}} width={1200} isResizable={false}>
+                <ResponsiveReactGridLayout layouts={Layouts} margin={[40,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 980, sm: 768, xs: 480}} isResizable={false}>
                   <div className="grid-item" key={'digital'}>
 
                       <div className="donut-chart-title">Digital</div>
@@ -300,16 +300,16 @@ handleCancel() {
                           <th colSpan="1" className="green-text">Positive Themes</th>
                           <td className="">
                           <table className="fb-theme-text"><tbody>
-                            <tr><td>Text</td></tr>
-                            <tr><td>Text</td></tr>
-                            <tr><td>Text</td></tr></tbody>
+                            <tr><td>Staff - Attitude</td></tr>
+                            <tr><td>Staff - Helpfulness</td></tr>
+                            <tr><td>Staff - Friendliness</td></tr></tbody>
                           </table>
                           </td>
                           <td className="">
                           <table className="fb-theme-score"><tbody>
-                            <tr><td>Score</td></tr>
-                            <tr><td>Score</td></tr>
-                            <tr><td>Score</td></tr></tbody>
+                            <tr><td>3.69</td></tr>
+                            <tr><td>2.59</td></tr>
+                            <tr><td>1.66</td></tr></tbody>
                           </table>
                           </td>
                         </tr>
@@ -317,16 +317,16 @@ handleCancel() {
                           <th colSpan="" className="red-text">Negative Themes</th>
                           <td className="">
                           <table className="fb-theme-text"><tbody>
-                            <tr><td>Text</td></tr>
-                            <tr><td>Text</td></tr>
-                            <tr><td>Text</td></tr></tbody>
+                            <tr><td>Competitors</td></tr>
+                            <tr><td>Discounts and Offers</td></tr>
+                            <tr><td>Affordability</td></tr></tbody>
                           </table>
                           </td>
                           <td className="">
                           <table className="fb-theme-score"><tbody>
-                            <tr><td>Score</td></tr>
-                            <tr><td>Score</td></tr>
-                            <tr><td>Score</td></tr></tbody>
+                            <tr><td>-1.23</td></tr>
+                            <tr><td>-1.13</td></tr>
+                            <tr><td>-1.23</td></tr></tbody>
                           </table>
                           </td>
                         </tr>
@@ -379,16 +379,16 @@ handleCancel() {
                               <th colSpan="1" className="green-text">Positive Themes</th>
                               <td className="">
                               <table className="fb-theme-text"><tbody>
-                                <tr><td>Text</td></tr>
-                                <tr><td>Text</td></tr>
-                                <tr><td>Text</td></tr></tbody>
+                                <tr><td>Staff - Attitude</td></tr>
+                                <tr><td>Staff - Helpfulness</td></tr>
+                                <tr><td>Staff - Friendliness</td></tr></tbody>
                               </table>
                               </td>
                               <td className="">
                               <table className="fb-theme-score"><tbody>
-                                <tr><td>Score</td></tr>
-                                <tr><td>Score</td></tr>
-                                <tr><td>Score</td></tr></tbody>
+                                <tr><td>3.69</td></tr>
+                                <tr><td>2.59</td></tr>
+                                <tr><td>1.66</td></tr></tbody>
                               </table>
                               </td>
                             </tr>
@@ -396,16 +396,16 @@ handleCancel() {
                               <th colSpan="" className="red-text">Negative Themes</th>
                               <td className="">
                               <table className="fb-theme-text"><tbody>
-                                <tr><td>Text</td></tr>
-                                <tr><td>Text</td></tr>
-                                <tr><td>Text</td></tr></tbody>
+                                <tr><td>Competitors</td></tr>
+                                <tr><td>Discounts and Offers</td></tr>
+                                <tr><td>Affordability</td></tr></tbody>
                               </table>
                               </td>
                               <td className="">
                               <table className="fb-theme-score"><tbody>
-                                <tr><td>Score</td></tr>
-                                <tr><td>Score</td></tr>
-                                <tr><td>Score</td></tr></tbody>
+                                <tr><td>-1.23</td></tr>
+                                <tr><td>-1.13</td></tr>
+                                <tr><td>-1.23</td></tr></tbody>
                               </table>
                               </td>
                             </tr>
@@ -458,16 +458,16 @@ handleCancel() {
                             <th colSpan="1" className="green-text">Positive Themes</th>
                             <td className="">
                             <table className="fb-theme-text"><tbody>
-                              <tr><td>Text</td></tr>
-                              <tr><td>Text</td></tr>
-                              <tr><td>Text</td></tr></tbody>
+                              <tr><td>Staff - Attitude</td></tr>
+                              <tr><td>Staff - Helpfulness</td></tr>
+                              <tr><td>Staff - Friendliness</td></tr></tbody>
                             </table>
                             </td>
                             <td className="">
                             <table className="fb-theme-score"><tbody>
-                              <tr><td>Score</td></tr>
-                              <tr><td>Score</td></tr>
-                              <tr><td>Score</td></tr></tbody>
+                              <tr><td>3.69</td></tr>
+                              <tr><td>2.59</td></tr>
+                              <tr><td>1.66</td></tr></tbody>
                             </table>
                             </td>
                           </tr>
@@ -475,16 +475,16 @@ handleCancel() {
                             <th colSpan="" className="red-text">Negative Themes</th>
                             <td className="">
                             <table className="fb-theme-text"><tbody>
-                              <tr><td>Text</td></tr>
-                              <tr><td>Text</td></tr>
-                              <tr><td>Text</td></tr></tbody>
+                              <tr><td>Competitors</td></tr>
+                              <tr><td>Discounts and Offers</td></tr>
+                              <tr><td>Affordability</td></tr></tbody>
                             </table>
                             </td>
                             <td className="">
                             <table className="fb-theme-score"><tbody>
-                              <tr><td>Score</td></tr>
-                              <tr><td>Score</td></tr>
-                              <tr><td>Score</td></tr></tbody>
+                            <tr><td>-1.23</td></tr>
+                            <tr><td>-1.13</td></tr>
+                            <tr><td>-1.23</td></tr></tbody>
                             </table>
                             </td>
                           </tr>
