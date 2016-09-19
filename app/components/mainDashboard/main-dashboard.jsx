@@ -92,7 +92,7 @@ export default class MainDashboard extends React.Component {
       this.setState({firstOrSecondJSON: 'first'})
 
     }
-    return axios.get(jsonPath)
+    return axios.get('./dashboard.json')
       .then(function(result){
 
         this.setState({
@@ -146,13 +146,13 @@ export default class MainDashboard extends React.Component {
                </div>
              )
 
-           } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 7){
+           } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 8){
              return (
                <div className="col-md-1 rating-orange">
                  <span>{custSatisfactionData[rating]}</span>
                </div>
              )
-           } else if (custSatisfactionData[rating] > 7){
+           } else if (custSatisfactionData[rating] > 8){
              return (
                <div className="col-md-1 rating-green">
                  <span>{custSatisfactionData[rating]}</span>
@@ -171,13 +171,13 @@ export default class MainDashboard extends React.Component {
               </div>
             )
 
-          } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 7){
+          } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 8){
             return (
               <div className="col-md-1 rating-orange">
                 <span>{easeRatings[rating]}</span>
               </div>
             )
-          } else if (easeRatings[rating] > 7){
+          } else if (easeRatings[rating] > 8){
             return (
               <div className="col-md-1 rating-green">
                 <span>{easeRatings[rating]}</span>
@@ -191,8 +191,8 @@ export default class MainDashboard extends React.Component {
       return (
         <div className="survey row">
           <div className="nps-score">
-            NPS Score
-              <span className="nps-number">VAL</span>
+            <span>NPS Score</span>
+              <span className="nps-number">20</span>
           </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}

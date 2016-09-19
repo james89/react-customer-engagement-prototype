@@ -140,12 +140,11 @@ NPS SCORE
   }
 }
 .nps-score {
-  display: table;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  background: #292A35;
-  color: #fff;
+
   margin: 0 auto;
   height: 50px;
   width: 250px;
@@ -153,22 +152,29 @@ NPS SCORE
   line-height: 50px;
   margin-bottom: 20px;
   margin-top: -56px;
+  background-color: #292A35;
+
 
   span:first-of-type {
     background: url('/icons/nps_score.png') no-repeat;
     background-position: left;
-    display: block;
+    display: inline-block;
     text-align: right;
-    margin-right: 15px;
   box-shadow: 2px 0px 28px -5px rgba(41,42,53,1);
+  background-color: #292A35;
+  color: #fff;
+  float: left;
+  width: 165px;
+  padding-right: 10px;
 
   }
   .nps-number {
-    display: table-cell;
+    display: inline-block;
     width: 78px;
     height: 50px;
     background: #fff;
     border: 1px solid #D5D5D5;
+    float: right;
   }
 }
 
@@ -555,4 +561,12 @@ ICONS
 
 .fb-conf .row-header {
   border-top: 1px solid #EFEFEF !important;
+}
+
+
+
+
+.nps-number {
+  color: #0C0C0C;
+  font-size: 34px;
 }

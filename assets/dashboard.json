@@ -6,24 +6,24 @@
 		"customerExperience":{
 
 			"customerSatisfaction":{
-				"seek":7.12,
-				"purchase":8.39,
-				"developFirstImpression":6.27,
-				"use":7.12,
-				"getHelp":8.55,
-				"optimize":8.11,
-				"seekExternal":6.10,
-				"leave":3.11
+				"seek":7.1,
+				"purchase":8.2,
+				"developFirstImpression":7.2,
+				"use":7.4,
+				"getHelp":7.2,
+				"optimize":8.1,
+				"seekExternal":6.5,
+				"leave":3.2
 			},
 			"easeOfDoingBusiness":{
-				"seek":7.43,
-				"purchase":8.33,
-				"developFirstImpression":2.21,
-				"use":7.34,
-				"getHelp":4.31,
-				"optimize":8.31,
-				"seekExternal":6.96,
-				"leave":4.23
+				"seek":6.3,
+				"purchase":7.2,
+				"developFirstImpression":6.4,
+				"use":9.1,
+				"getHelp":7.7,
+				"optimize":7.5,
+				"seekExternal":6.1,
+				"leave":4.3
 			},
 			"textAnalytics":{
 				"topPositiveThemes":[

@@ -7,28 +7,28 @@
         "channel": "Digital",
         "chart": [
           {
-            "customerEffor": 7,
-            "customerSatisfaction": 7,
+            "customerEffor": 7.1,
+            "customerSatisfaction": 7.2,
             "experience": "seek (T-Mobile)"
           },
           {
-            "customerEffor": 7,
-            "customerSatisfaction": 7,
+            "customerEffor": 7.1,
+            "customerSatisfaction": 7.3,
             "experience": "purchase"
           },
           {
-            "customerEffor": 4,
-            "customerSatisfaction": 5,
+            "customerEffor": 4.5,
+            "customerSatisfaction": 5.1,
             "experience": "Get Help"
           },
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 8,
+            "customerEffor": 8.4,
+            "customerSatisfaction": 8.5,
             "experience": "Optimize"
           },
           {
-            "customerEffor": 6,
-            "customerSatisfaction": 6,
+            "customerEffor": 6.6,
+            "customerSatisfaction": 6.8,
             "experience": "seek (External)"
           }
         ],
@@ -40,28 +40,28 @@
         "channel": "Call Center",
         "chart": [
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 8,
+            "customerEffor": 8.1,
+            "customerSatisfaction": 8.3,
             "experience": "Purchase"
           },
           {
-            "customerEffor": 7,
-            "customerSatisfaction": 7,
+            "customerEffor": 7.1,
+            "customerSatisfaction": 7.5,
             "experience": "First Impression"
           },
           {
-            "customerEffor": 9,
-            "customerSatisfaction": 8,
+            "customerEffor": 9.3,
+            "customerSatisfaction": 8.9,
             "experience": "Get Help"
           },
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 8,
+            "customerEffor": 8.3,
+            "customerSatisfaction": 8.5,
             "experience": "Optimize"
           },
           {
-            "customerEffor": 6,
-            "customerSatisfaction": 6,
+            "customerEffor": 6.6,
+            "customerSatisfaction": 6.7,
             "experience": "seek (External)"
           }
         ],
@@ -73,28 +73,28 @@
         "channel": "In Store",
         "chart": [
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 9,
+            "customerEffor": 8.1,
+            "customerSatisfaction": 9.1,
             "experience": "Purchase"
           },
           {
-            "customerEffor": 7,
-            "customerSatisfaction": 7,
+            "customerEffor": 7.5,
+            "customerSatisfaction": 7.3,
             "experience": "First Impression"
           },
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 8,
+            "customerEffor": 8.8,
+            "customerSatisfaction": 8.1,
             "experience": "Get Help"
           },
           {
-            "customerEffor": 8,
-            "customerSatisfaction": 8,
+            "customerEffor": 8.3,
+            "customerSatisfaction": 8.1,
             "experience": "Optimize"
           },
           {
-            "customerEffor": 6,
-            "customerSatisfaction": 6,
+            "customerEffor": 6.6,
+            "customerSatisfaction": 6.7,
             "experience": "seek (External)"
           }
         ],

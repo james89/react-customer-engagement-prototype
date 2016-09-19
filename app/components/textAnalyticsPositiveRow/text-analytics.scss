@@ -14,11 +14,13 @@
     display: flex;
     padding: 0;
     flex: 1;
+    min-height: 40px;
   }
 
   div.text-ana-theme {
     flex: 2;
     padding: 5px 10px;
+    flex-grow: 3;
     border: 1px solid #EFEFEF;
     border-top: none;
     box-shadow: 0 1px #FFF;
@@ -36,7 +38,22 @@
   }
 }
 
+div.col-md-1  {
+  .theme-table div.text-ana-score {
+    flex: 1;
+    margin-left: 2px;
+    padding: 5px 2px;
+  }
+  .theme-table div.text-ana-theme {
+    padding: 5px 8px;
+  }
+  .margin-3 {
+    margin-left: -3px;
+  }
+}
+
 
 .text-analytics [class*="col-"] {
   padding: 0 !important;
+  flex-direction: column;
 }

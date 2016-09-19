@@ -242,7 +242,7 @@ handleCancel() {
                     <div className="row nps-row">
                     <div className="nps-score">
                       NPS Score
-                        <span className="nps-number">VAL</span>
+                        <span className="nps-number">20</span>
                     </div>
                     </div>
                 <ResponsiveReactGridLayout layouts={Layouts} margin={[40,40]} cols={{lg: 12, md: 12, sm: 12, xs: 6}} breakpoints={{lg: 1200, md: 980, sm: 768, xs: 480}} isResizable={false}>
