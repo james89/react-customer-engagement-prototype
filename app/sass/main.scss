@@ -57,9 +57,10 @@ Datepicker + Dropdown
 .rating-key {
 	float: right;
   padding-right: 0;
+  margin-right: -23px;
 }
 .datepicker {
-  max-width: 400px;
+  max-width: 370px;
   display: inline-block;
   padding-left: 0;
 
@@ -89,6 +90,8 @@ Datepicker + Dropdown
     width: 290px;
     border: 1px solid #d5d5d5;
     input {
+      height: 40px;
+
       border: none;
       border-radius: 0px;
       box-shadow: none;
@@ -101,10 +104,11 @@ Datepicker + Dropdown
     vertical-align: top;
     background: #85BC40;
     border: 1px solid #85BC40;
-    margin-left: 20px;
+    margin-left: 10px;
+
     margin-top: 1px;
-    height: 50px;
-    width: 78px;
+    height: 40px;
+    width: 60px;
     border-radius: 0;
     float: right;
     text-transform: uppercase;
@@ -146,12 +150,12 @@ NPS SCORE
   letter-spacing: 1px;
 
   margin: 0 auto;
-  height: 50px;
+  height: 40px;
   width: 250px;
   text-align: center;
-  line-height: 50px;
-  margin-bottom: 20px;
-  margin-top: -56px;
+  line-height: 40px;
+  margin-bottom: 15px;
+  margin-top: -45px;
   background-color: #292A35;
 
 
@@ -170,8 +174,8 @@ NPS SCORE
   }
   .nps-number {
     display: inline-block;
-    width: 78px;
-    height: 50px;
+    width: 68px;
+    height: 40px;
     background: #fff;
     border: 1px solid #D5D5D5;
     float: right;
@@ -493,13 +497,13 @@ Tablet fixes
     margin-right: 0;
 
     .input-group {
-      width: 275px;
+      width: 265px;
     }
 
     .datepick-btn {
-      width: 65px;
+      width: 55px;
       margin-left: 0;
-      right: 40px;
+      right: 30px;
     }
   }
 
@@ -568,5 +572,5 @@ ICONS
 
 .nps-number {
   color: #0C0C0C;
-  font-size: 34px;
+  font-size: 30px;
 }
