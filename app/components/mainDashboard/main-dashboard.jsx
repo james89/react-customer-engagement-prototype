@@ -157,34 +157,54 @@ export default class MainDashboard extends React.Component {
     })
   }
 
+  getRandomizer(bottom, top) {
+    let random = Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+    return (
+      <span>
+      { random }
+      </span>
+    );
+
+  }
+
   shouldRenderTable(){
     let custSatisfactionData = this.state.data2 || '';
     let easeRatings = this.state.easeRatings || '';
-
+    var self = this;
          var customerSatisfactionNodes = Object.keys(custSatisfactionData).map(function(rating) {
 
            if (custSatisfactionData[rating] <= 6){
              return (
                <div className="col-md-1 rating-red">
-                 <span>{custSatisfactionData[rating]}</span>
+                 {/* <span>{custSatisfactionData[rating]}</span> */}
+
+                 {/* for true random number range */}
+                 <span>{this.getRandomizer(1,6)}</span>
+
                </div>
              )
 
            } else if (custSatisfactionData[rating] > 6 && custSatisfactionData[rating] <= 8){
              return (
                <div className="col-md-1 rating-orange">
-                 <span>{custSatisfactionData[rating]}</span>
+               {/* <span>{custSatisfactionData[rating]}</span> */}
+
+               {/* for true random number range */}
+               <span>{this.getRandomizer(7,8)}</span>
                </div>
              )
            } else if (custSatisfactionData[rating] > 8){
              return (
                <div className="col-md-1 rating-green">
-                 <span>{custSatisfactionData[rating]}</span>
+               {/* <span>{custSatisfactionData[rating]}</span> */}
+
+               {/* for true random number range */}
+               <span>{this.getRandomizer(9,10)}</span>
                </div>
              )
            }
 
-        });
+        }, self);
 
         var easeOfDoingBusinessNodes = Object.keys(easeRatings).map(function(rating) {
 
