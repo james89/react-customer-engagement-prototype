@@ -111,7 +111,7 @@ export default class MainDashboard extends React.Component {
       this.setState({firstOrSecondJSON: 'first'})
 
     }
-    return axios.get('./dashboard.json')
+    return axios.get(jsonPath)
       .then(function(result){
 
         this.setState({
