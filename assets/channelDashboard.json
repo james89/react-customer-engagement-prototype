@@ -1,108 +1,192 @@
 {
-  "channelDashboard": {
-    "dateFormat": "ddMMyyyy",
-    "fromDate": "01112015",
-    "satisfactionrate": [
-      {
-        "channel": "Digital",
-        "chart": [
-          {
-            "customerEffor": 7.1,
-            "customerSatisfaction": 7.2,
-            "experience": "seek (T-Mobile)"
-          },
-          {
-            "customerEffor": 7.1,
-            "customerSatisfaction": 7.3,
-            "experience": "purchase"
-          },
-          {
-            "customerEffor": 4.5,
-            "customerSatisfaction": 5.1,
-            "experience": "Get Help"
-          },
-          {
-            "customerEffor": 8.4,
-            "customerSatisfaction": 8.5,
-            "experience": "Optimize"
-          },
-          {
-            "customerEffor": 6.6,
-            "customerSatisfaction": 6.8,
-            "experience": "seek (External)"
-          }
-        ],
-        "overall_score": 3,
-        "topNegativeThemes": "Website Functionality & Performance, Helpful and Accurate Information, Relevance/Helpfulness of Information",
-        "topPositiveThemes": "Device – Screen, Feature SIM Card, Stability - Reboot"
-      },
-      {
-        "channel": "Call Center",
-        "chart": [
-          {
-            "customerEffor": 8.1,
-            "customerSatisfaction": 8.3,
-            "experience": "Purchase"
-          },
-          {
-            "customerEffor": 7.1,
-            "customerSatisfaction": 7.5,
-            "experience": "First Impression"
-          },
-          {
-            "customerEffor": 9.3,
-            "customerSatisfaction": 8.9,
-            "experience": "Get Help"
-          },
-          {
-            "customerEffor": 8.3,
-            "customerSatisfaction": 8.5,
-            "experience": "Optimize"
-          },
-          {
-            "customerEffor": 6.6,
-            "customerSatisfaction": 6.7,
-            "experience": "seek (External)"
-          }
-        ],
-        "overall_score": 8,
-        "topNegativeThemes": "Issue Resolution, Follow-up, Listening",
-        "topPositiveThemes": "Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
-      },
-      {
-        "channel": "In Store",
-        "chart": [
-          {
-            "customerEffor": 8.1,
-            "customerSatisfaction": 9.1,
-            "experience": "Purchase"
-          },
-          {
-            "customerEffor": 7.5,
-            "customerSatisfaction": 7.3,
-            "experience": "First Impression"
-          },
-          {
-            "customerEffor": 8.8,
-            "customerSatisfaction": 8.1,
-            "experience": "Get Help"
-          },
-          {
-            "customerEffor": 8.3,
-            "customerSatisfaction": 8.1,
-            "experience": "Optimize"
-          },
-          {
-            "customerEffor": 6.6,
-            "customerSatisfaction": 6.7,
-            "experience": "seek (External)"
-          }
-        ],
-        "overall_score": 6,
-        "topNegativeThemes": "Upselling, Manager/Supervisor",
-        "topPositiveThemes": "Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
-      }
-    ],
-    "toDate": "25022016"
-  }
+	"channelDashboard":{
+		"fromDate":"01112015",
+		"toDate":"25022016",
+		"dateFormat":"ddMMyyyy",
+		"score":{
+			"label":"NPS Score",
+			"value":20
+		}
+		"satisfactionrate":[
+			{
+				"channel":"Digital",
+				"averageScore": 7,
+				"chart":
+				[
+					{
+						"experience": "seek",
+						"customerSatisfaction": 7,
+						"easeOfBusiness":7
+					},
+					{
+						"experience": "purchase",
+						"customerSatisfaction": 7,
+						"easeOfBusiness":7
+					},
+					{
+						"experience": "Get Help",
+						"customerSatisfaction": 5,
+						"easeOfBusiness":4
+					},
+					{
+						"experience": "Optimize",
+						"customerSatisfaction": 8,
+						"easeOfBusiness":8
+					},
+					{
+						"experience": "seek (External)",
+						"customerSatisfaction": 6,
+						"easeOfBusiness":6
+					}
+				],
+
+				"topPositiveThemes":[
+					{
+						"message":"Staff Attitude",
+						"score":3.69
+					},
+					{
+						"message":"Staff Helpfulness",
+						"score":2.69
+					}
+					{
+						"message":"Staff Friendliness",
+						"score":1.69
+					}
+
+				],
+				"topNegativeThemes":[
+					{
+						"message":"Competitors",
+						"score":-1.23
+					},
+					{
+						"message":"Discounts and Offers",
+						"score":-1.13
+					}
+					{
+						"message":"Affordability",
+						"score":-1.23
+					}
+				]
+
+
+			},
+			{
+				"channel":"Call Center",
+				"averageScore": 8,
+				"chart":
+				[
+					{
+						"experience": "Purchase",
+						"customerSatisfaction": 8,
+						"customerEffor":8
+					},
+					{
+						"experience": "First Impression",
+						"customerSatisfaction": 7,
+						"customerEffor":7
+					},
+					{
+						"experience": "Get Help",
+						"customerSatisfaction": 8,
+						"customerEffor":9
+					},
+					{
+						"experience": "Optimize",
+						"customerSatisfaction": 8,
+						"customerEffor":8
+					},
+
+				],
+				"topPositiveThemes":[
+					{
+						"message":"Staff Attitude",
+						"score":3.69
+					},
+					{
+						"message":"Staff Helpfulness",
+						"score":2.69
+					}
+					{
+						"message":"Staff Friendliness",
+						"score":1.69
+					}
+
+				],
+				"topNegativeThemes":[
+					{
+						"message":"Competitors",
+						"score":-1.23
+					},
+					{
+						"message":"Discounts and Offers",
+						"score":-1.13
+					}
+					{
+						"message":"Affordability",
+						"score":-1.23
+					}
+				]
+
+			},
+			{
+				"channel":"In Store",
+				"averageScore": 6,
+				"chart":
+				[
+					{
+						"experience": "Purchase",
+						"customerSatisfaction": 9,
+						"customerEffor":8
+					},
+					{
+						"experience": "First Impression",
+						"customerSatisfaction": 7,
+						"customerEffor":7
+					},
+					{
+						"experience": "Get Help",
+						"customerSatisfaction": 8,
+						"customerEffor":8
+					},
+					{
+						"experience": "Optimize",
+						"customerSatisfaction": 8,
+						"customerEffor":8
+					},
+				],
+				"topPositiveThemes":[
+					{
+						"message":"Staff Attitude",
+						"score":3.69
+					},
+					{
+						"message":"Staff Helpfulness",
+						"score":2.69
+					}
+					{
+						"message":"Staff Friendliness",
+						"score":1.69
+					}
+
+				],
+				"topNegativeThemes":[
+					{
+						"message":"Competitors",
+						"score":-1.23
+					},
+					{
+						"message":"Discounts and Offers",
+						"score":-1.13
+					}
+					{
+						"message":"Affordability",
+						"score":-1.23
+					}
+				]
+			}
+		]
+
+	}
 }

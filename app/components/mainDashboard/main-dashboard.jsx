@@ -56,11 +56,30 @@ export default class MainDashboard extends React.Component {
       endDate: moment(),
       data: {},
       data2: '',
+      fbData: {},
       easeRatings: undefined,
       firstOrSecondJSON: undefined,
       dashboardData: undefined,
-      positiveRowData: '',
-      intRowVisible: false
+      positiveRowData: [{
+        texts: []
+      },
+      {
+        texts: []
+      },
+      {
+        texts: []
+      }],
+      negativeRowData:[{
+        texts: []
+      },
+      {
+        texts: []
+      },
+      {
+        texts: []
+      }],
+      intRowVisible: false,
+      npsScore: ''
 		};
 
 	}
@@ -99,7 +118,10 @@ export default class MainDashboard extends React.Component {
           dashboardData: result.data.dashboard.customerExperience,
           data2: result.data.dashboard.customerExperience.customerSatisfaction,
           easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness,
-          positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes
+          positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes,
+          negativeRowData: result.data.dashboard.customerExperience.textAnalytics.topNegativeThemes,
+          npsScore: result.data.dashboard.score.value
+
         })
 
       }.bind(this));
@@ -111,12 +133,14 @@ export default class MainDashboard extends React.Component {
     // request dummy data
     axios.get('./dashboard.json')
       .then(function(result){
-
         this.setState({
           dashboardData: result.data.dashboard.customerExperience,
           data2: result.data.dashboard.customerExperience.customerSatisfaction,
+          fbData: result.data.dashboard.customerExperience.feedbackConfidence,
           easeRatings: result.data.dashboard.customerExperience.easeOfDoingBusiness,
           positiveRowData: result.data.dashboard.customerExperience.textAnalytics.topPositiveThemes,
+          negativeRowData: result.data.dashboard.customerExperience.textAnalytics.topNegativeThemes,
+          npsScore: result.data.dashboard.score.value,
           firstOrSecondJSON: 'first',
           initialDataShown: false
         })
@@ -139,14 +163,14 @@ export default class MainDashboard extends React.Component {
 
          var customerSatisfactionNodes = Object.keys(custSatisfactionData).map(function(rating) {
 
-           if (custSatisfactionData[rating] <= 4){
+           if (custSatisfactionData[rating] <= 6){
              return (
                <div className="col-md-1 rating-red">
                  <span>{custSatisfactionData[rating]}</span>
                </div>
              )
 
-           } else if (custSatisfactionData[rating] > 4 && custSatisfactionData[rating] <= 8){
+           } else if (custSatisfactionData[rating] > 6 && custSatisfactionData[rating] <= 8){
              return (
                <div className="col-md-1 rating-orange">
                  <span>{custSatisfactionData[rating]}</span>
@@ -164,14 +188,14 @@ export default class MainDashboard extends React.Component {
 
         var easeOfDoingBusinessNodes = Object.keys(easeRatings).map(function(rating) {
 
-          if (easeRatings[rating] <= 4){
+          if (easeRatings[rating] <= 6){
             return (
               <div className="col-md-1 rating-red">
                 <span>{easeRatings[rating]}</span>
               </div>
             )
 
-          } else if (easeRatings[rating] > 4 && easeRatings[rating] <= 8){
+          } else if (easeRatings[rating] > 6 && easeRatings[rating] <= 8){
             return (
               <div className="col-md-1 rating-orange">
                 <span>{easeRatings[rating]}</span>
@@ -192,7 +216,7 @@ export default class MainDashboard extends React.Component {
         <div className="survey row">
           <div className="nps-score">
             <span>NPS Score</span>
-              <span className="nps-number">20</span>
+            <span className="nps-number">{this.state.npsScore}</span>
           </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
@@ -263,11 +287,11 @@ export default class MainDashboard extends React.Component {
 
 
             {/* Text Analytics - Negative Themes */}
-              <TextAnalyticsNegativeRow />
+              <TextAnalyticsNegativeRow negativeThemes={this.state.negativeRowData} />
             {/* /Text Analytics Row */}
 
             {/* Feedback Confidence */}
-            <FeedbackConfidenceRow />
+            <FeedbackConfidenceRow fbData={this.state.fbData} />
             {/* /Feedback Confidence Row */}
 
             </div>

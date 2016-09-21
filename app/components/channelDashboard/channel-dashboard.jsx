@@ -207,7 +207,7 @@ handleCancel() {
 
                       <div className="rating-key col-md-3 col-xs-12">
 
-                      <svg width="325px" height="50px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                      <svg width="325px" height="40px" viewBox="965 121 325 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                             <defs>
                               <rect id="path-1" x={0} y={0} width={325} height={50} />
                               <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x={0} y={0} width={325} height={50} fill="white">

@@ -12,8 +12,8 @@ class TextAnalyticsPositiveRow extends React.Component {
 
   render(){
 
-    let themes = this.props.positiveThemes || [];
-
+    let themes = this.props.positiveThemes || [{texts:[]}];
+    // let firstThemes = this.props.positiveThemes[0].texts || [{texts:[]}];
       return (
         <div className="row row-eq-height text-analytics white-bg">
           <div className="col-md-1 row-header">
@@ -24,98 +24,118 @@ class TextAnalyticsPositiveRow extends React.Component {
 
                   if (index === 1){
                     return (
-                      <div key={theme.phases} className="col-md-4">
-                        {theme.text}
+                      <div className="col-md-1">
+                        <div className="theme-table">
+                          {theme.texts.map(function(text){
+                            return (
+                              <div className="text-ana-row">
+                                <div className="text-ana-theme">{text.message}</div>
+                                <div className="text-ana-score">{text.score}</div>
+                              </div>
+                            )
+                          })}
+                        </div>
                       </div>
                     );
                   } else {
                     return (
-                      <div key={theme.phases} className="col-md-2">
-                        {theme.text}
+                      <div className="col-md-2">
+                        <div className="theme-table">
+                          {theme.texts.map(function(text){
+                            return (
+                              <div className="text-ana-row">
+                                <div className="text-ana-theme">{text.message}</div>
+                                <div className="text-ana-score">{text.score}</div>
+                              </div>
+                            )
+                          })}
+                        </div>
                       </div>
                     );
                   }
-                }) } */}
+                })
+            } */}
+
 
               <div className="col-md-2">
                 <div className="theme-table">
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Attitude</div>
-                    <div className="text-ana-score">3.69</div>
-                  </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Helpfulness</div>
-                    <div className="text-ana-score">2.59</div>
-                    </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Friendliness</div>
-                    <div className="text-ana-score">1.66</div>
-                  </div>
+                {
+
+                  themes[0].texts.map(function(text){
+                    return (
+                      <div className="text-ana-row">
+                        <div className="text-ana-theme">{text.message}</div>
+                        <div className="text-ana-score">{text.score}</div>
+                      </div>
+                    )
+                  })
+                }
+
                 </div>
               </div>
               <div className="col-md-2">
                 <div className="theme-table">
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Attitude</div>
-                    <div className="text-ana-score">3.69</div>
-                  </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Helpfulness</div>
-                    <div className="text-ana-score">2.59</div>
-                    </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Friendliness</div>
-                    <div className="text-ana-score">1.66</div>
-                  </div>
+                {
+
+                  themes[1].texts.map(function(text){
+
+                    return (
+                      <div className="text-ana-row">
+                        <div className="text-ana-theme">{text.message}</div>
+                        <div className="text-ana-score">{text.score}</div>
+                      </div>
+                    )
+                  })
+                }
                 </div>
               </div>
 
               <div className="col-md-1">
                 <div className="theme-table">
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Attitude</div>
-                    <div className="text-ana-score">3.69</div>
-                  </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Helpfulness</div>
-                    <div className="text-ana-score">2.59</div>
-                    </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Friendliness</div>
-                    <div className="text-ana-score">1.66</div>
-                  </div>
+                {
+
+                  themes[1].texts.map(function(text){
+
+                    return (
+                      <div className="text-ana-row">
+                        <div className="text-ana-theme">{text.message}</div>
+                        <div className="text-ana-score">{text.score}</div>
+                      </div>
+                    )
+                  })
+                }
                 </div>
               </div>
               <div className="col-md-1">
                 <div className="theme-table">
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Attitude</div>
-                    <div className="text-ana-score">3.69</div>
-                  </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Helpfulness</div>
-                    <div className="text-ana-score">2.59</div>
-                    </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Friendliness</div>
-                    <div className="text-ana-score">1.66</div>
-                  </div>
+                {
+
+                  themes[1].texts.map(function(text){
+
+                    return (
+                      <div className="text-ana-row">
+                        <div className="text-ana-theme">{text.message}</div>
+                        <div className="text-ana-score">{text.score}</div>
+                      </div>
+                    )
+                  })
+                }
                 </div>
               </div>
               <div className="col-md-2">
                 <div className="theme-table">
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Attitude</div>
-                    <div className="text-ana-score">3.69</div>
-                  </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Helpfulness</div>
-                    <div className="text-ana-score">2.59</div>
-                    </div>
-                  <div className="text-ana-row">
-                    <div className="text-ana-theme">Staff - Friendliness</div>
-                    <div className="text-ana-score">1.66</div>
-                  </div>
+                {
+
+                  themes[2].texts.map(function(text){
+
+                    return (
+                      <div className="text-ana-row">
+                        <div className="text-ana-theme">{text.message}</div>
+                        <div className="text-ana-score">{text.score}</div>
+                      </div>
+                    )
+                  })
+                }
                 </div>
               </div>
         </div>

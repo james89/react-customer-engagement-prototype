@@ -190,6 +190,11 @@ border: 1px solid #efefef;
   td {
     padding: 0 !important;
   }
+
+  table.fb-theme-text tr td {
+    text-align: left;
+    padding-left: 15px !important;
+  }
   table {
   width: 100%;
 

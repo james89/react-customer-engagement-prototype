@@ -3,56 +3,138 @@
 		"fromDate":"01112015",
 		"toDate":"25022016",
 		"dateFormat":"ddMMyyyy",
+		"score":{
+			"label":"NPS Score",
+			"value":20
+		},
 		"customerExperience":{
 
 			"customerSatisfaction":{
-				"seek":7.1,
-				"purchase":8.2,
-				"developFirstImpression":7.2,
-				"use":7.4,
-				"getHelp":7.2,
-				"optimize":8.1,
-				"seekExternal":6.5,
+				"seek":7,
+				"purchase":8,
+				"developFirstImpression":6,
+				"use":7,
+				"getHelp":8,
+				"optimize":8,
+				"seekExternal":6,
 				"leave":3.2
 			},
 			"easeOfDoingBusiness":{
-				"seek":6.3,
-				"purchase":7.2,
-				"developFirstImpression":6.4,
-				"use":9.1,
-				"getHelp":7.7,
-				"optimize":7.5,
-				"seekExternal":6.1,
+				"seek":7,
+				"purchase":8,
+				"developFirstImpression":7,
+				"use":7,
+				"getHelp":8,
+				"optimize":8,
+				"seekExternal":6,
 				"leave":4.3
 			},
 			"textAnalytics":{
 				"topPositiveThemes":[
 					{
 						"phases": "seek;purchase",
-						"text":"Helpful and Accurate Information, Attitude and Professionalism"
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
+
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",
-						"text":"Helpful and Accurate Information, Attitude and Professionalism, Knowledge and Competence"
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
 					},
 					{
 						"phases":"seekExternal;leave",
-						"text":"Helpful and Accurate Information"
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
 					}
 				],
 				"topNegativeThemes":[
 					{
 						"phases": "seek;purchase",
-						"text":"Competitors, Discounts and Offers, Affordability for Price"
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
 					},
 					{
 						"phases":"developFirstImpression;use;getHelp;optimize",
-						"text": "Customer Service – Multiple Attempts, Connectivity – Connection Strength, <br> Customer Service – Status Updates"
-
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
 					},
 					{
 						"phases":"seekExternal;leave",
-						"text": "Competitors, Trust, Issue Resolution"
+						"texts":[
+							{
+								"message":"Staff - Attitude",
+								"score":3.69
+							},
+							{
+								"message":"Staff - Helpfulness",
+								"score":2.59
+							},
+							{
+								"message":"Staff Friendliness",
+								"score":1.66
+							}
+						]
 					}
 				]
 
@@ -66,9 +148,6 @@
 				"optimize":5,
 				"seekExternal":4,
 				"leave":2
-			},
-			"nsp":{
-				"meter":20
 			}
 
 		}
