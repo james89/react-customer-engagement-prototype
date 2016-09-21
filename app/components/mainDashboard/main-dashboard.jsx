@@ -159,12 +159,7 @@ export default class MainDashboard extends React.Component {
 
   getRandomizer(bottom, top) {
     let random = Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-    return (
-      <span>
-      { random }
-      </span>
-    );
-
+    return random;
   }
 
   shouldRenderTable(){
@@ -236,7 +231,7 @@ export default class MainDashboard extends React.Component {
         <div className="survey row">
           <div className="nps-score">
             <span>NPS Score</span>
-            <span className="nps-number">{this.state.npsScore}</span>
+            <span className="nps-number">{this.getRandomizer(10,90)}</span>
           </div>
           <div className="col-sm-12 col-md-12">
             {/* Customer Experience - Header Row */}
